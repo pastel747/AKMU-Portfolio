@@ -10,13 +10,18 @@
 </head>
 <body>
     <header class="main">
-        <!-- <div>
+        <div>
             <h1>
                 <a href="index.html#main">
                     <img src="images/AKMU_logo.png" alt="akmu_logo">
                 </a>
             </h1>
-            <input type="checkbox">
+            <input type="checkbox" id="mnav">
+            <label for="mnav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <ul>
                     <li><a href="index.html#main">HOME</a></li>
@@ -26,57 +31,57 @@
                     <li><a href="index.html#gallery">GALLERY</a></li>
                 </ul>
             </nav>
-        </div> -->
-        <nav>
-            <h1>
-                <a href="index.html#main">
-                    <img src="images/AKMU_logo.png" alt="akmu_logo">
-                </a>
-            </h1>
-            <input type="checkbox" value="">
-            <!-- value 안써도 되나?  -->
-            <ul>
-                <li><a href="index.html#main">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#album">ALBUM</a></li>
-                <li><a href="index.html#play">PLAY</a></li>
-                <li><a href="index.html#gallery">GALLERY</a></li>
-            </ul>
-        </nav>
-        <div>
-            <video src=""></video>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QF_btvFwcLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </header>
 
-    <!-- <section class="about">
+    <section class="videoArea">
         <div>
-            <h2>ABOUT</h2>
-            <figure>
-                <img src="" alt="images/Album_1.jpg">
-                <figcaption>
-                    <dl>
-                        <dt>LEE CHANHYUK<br>LEE SUHYUN</dt>
-                        <dd>1996.09.12<br>1999.05.04</dd>
-                    </dl>
-                    <p>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</p>
-                </figcaption>
-            </figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QF_btvFwcLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </section> -->
+    </section>
+    
     <figure class="about">
         <h2>ABOUT</h2>
-        <!-- div 폰트 넣어서 조정? -->
-        <img src="" alt="images/Album_1.jpg">
+        <img src="images/Gallery_4.jpg" alt="images/Album_1.jpg">
         <figcaption>
             <dl>
                 <dt>LEE CHANHYUK<br>LEE SUHYUN</dt>
-                <!-- dt dd 를 strong이나 blackquote으로 잡는건? -->
                 <dd>1996.09.12<br>1999.05.04</dd>
             </dl>
             <p>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</p>
         </figcaption>
     </figure>
+    <!-- 추가 -->
+    <section class="about">
+        <h2>ABOUT</h2>
+        <figure>
+            <img src="" alt="">
+            <figcaption>
+                <ul>
+                    <li>
+                        <h3>LEE CHANHYUK</h3>
+                        <p>1996.09.12</p>
+                    </li>
+                    <li>
+                        <h3>LEE SUHYUN</h3>
+                        <p>1999.05.04</p>
+                    </li>
+                </ul>
+                <p>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</p>
+            </figcaption>
+        </figure>
+    </section>
+    <section class="about">
+        <h2>ABOUT</h2>
+        <figure>
+            <img src="" alt="">
+            <figcaption>
+                <h3>LEE CHANHYUK<br>LEE SUHYUN</h3>
+                <span>1996.09.12<br>1999.05.04</span>
+                <p>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</p>
+            </figcaption>
+        </figure>
+    </section>
 
     <!-- <section class="S_album">
         <div>
@@ -91,45 +96,164 @@
             </figure>
         </div>
     </section> -->
-    <section class="album">
+    <!-- <section class="album">
         <div>
             <h2>LASTEST ALBUM</h2>
+            <p>
+                
+            </p>
             <dl>
-                <dt>3rd FULL ALBUM [항해]<br>2019.09.25 발매</dt>
-                <dd>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</dd>
-            </dl>
-            <dl>
-                <!-- about의 구조 재활용 가능? -->
                 <dt>3rd FULL ALBUM [항해]</dt>
                 <dd>2019.09.25 발매</dd>
             </dl>
             <p>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</p>
         </div>
-    </section>
+    </section> -->
     <article class="album">
         <div>
             <h2>LASTEST ALBUM</h2>
+            <p>
+                <span>2019.09.25 발매</span>
+                3rd FULL ALBUM [항해]
+            </p>
             <dl>
                 <dt>3rd FULL ALBUM [항해]<br>2019.09.25 발매</dt>
                 <dd>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</dd>
             </dl>
-            <dl>
-                <!-- about의 구조 재활용 가능? -->
-                <dt>3rd FULL ALBUM [항해]</dt>
-                <dd>2019.09.25 발매</dd>
-            </dl>
-            <p>악동뮤지션의 곡은 일상의 사소한 순간을 포착해 그곳에 감수성을 얹은 가사를 쓴다. 그 아기자기한 개성으로 대중성을 확보했다는 점은 대단한 부분이다.두 사람의 훌륭한 음악적 감각이 없었으면 불가능했을 것이다. 이런 특징은 주로 데뷔 이전부터 1집까지의 곡에서 두드러지며, 2집 이후부터는 좀 더 추상적이고, 철학적 고민의 흔적이 드러난다. '진정한 자유'에 대해서 다룬 'Freedom'이나, 사회에 적응하지 못하는 인물의 이야기를 담은 'YOU KNOW ME'와 '주변인', '죽음'에 대해서 다루고 있는 '물 만난 물고기' 등이 그 예시라고 할 수 있다.</p>
         </div>
+        <!-- div는 maxwidth와 after img 담당 -->
     </article>
 
     <section class="play">
         <h2>PLAY</h2>
-        
-    </section>
-
-    <section class="gallery">
-        <h2>GALLERY</h2>
-        
+        <img src="" alt="">
+        <ul>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        <img src="" alt="">
+                        <p></p>
+                        <span></span>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        img
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        img
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        img
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        img
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        img
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        img
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <span></span>
+                <h3></h3>
+                <ol>
+                    <li>
+                        img
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+        </ul>
+        <div>
+            <ul>
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <img src="" alt="">
+                </li>
+            </ul>
+        </div>
     </section>
 
 </body>
