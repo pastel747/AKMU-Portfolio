@@ -1,24 +1,39 @@
+
 $(document).ready(function() {
+    $("#single_1").fancybox({
+          helpers: {
+              title : {
+                  type : 'float'
+              }
+          }
+      });
 
-	/* This is basic - uses default settings */
-	
-	$("a#single_image").fancybox();
-	
-	/* Using custom settings */
-	
-	$("a#inline").fancybox({
-		'hideOnContentClick': true
-	});
+    $("#single_2").fancybox({
+    	openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
 
-	/* Apply fancybox to multiple items */
-	
-	$("a.group").fancybox({
-		'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	false
-	});
-	$("a.grouped_elements").fancybox();
-	
+    	helpers : {
+    		title : {
+    			type : 'inside'
+    		}
+    	}
+    });
+
+    $("#single_3").fancybox({
+    	openEffect : 'none',
+    	closeEffect	: 'none',
+    	helpers : {
+    		title : {
+    			type : 'outside'
+    		}
+    	}
+    });
+
+    $("#single_4").fancybox({
+    	helpers : {
+    		title : {
+    			type : 'over'
+    		}
+    	}
+    });
 });

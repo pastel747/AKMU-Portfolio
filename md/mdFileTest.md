@@ -49,3 +49,6 @@ swiper slide 사용시 script는 body 맨 마지막에 작성하여 html 다음�
 
 
   PLAY OL LI 에서 이미지는 불릿으로 대체, 그리고  HTML P 로 커버 치기 
+
+  
+   https://fancyapps.com/fancybox/ 참고
