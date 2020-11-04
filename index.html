@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen"/>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <link rel="stylesheet" href="css/import.css">
     <script src="js/index.js"></script>
 </head>
@@ -341,73 +339,97 @@
         </ul>
         <div>
             <input type="button" value="playButton">
-            <p class="playlistName"></p>
-            <p class="playlistTime"></p>
-        </div>
-        <div>
             <ul>
-                <li>
-                    <img src="images/Album_8.jpg" alt="AKMU_3rdFullAlbum">
-                </li>
-                <li>
-                    <img src="images/Album_7.jpg" alt="AKMU_singleAlbum5">
-                </li>
-                <li>
-                    <img src="images/Album_6.jpg" alt="AKMU_singleAlbum4">
-                </li>
-                <li>
-                    <img src="images/Album_5.jpg" alt="AKMU_2ndFullAlbum">
-                </li>
-                <li>
-                    <img src="images/Album_4.jpg" alt="AKMU_singleAlbum3">
-                </li>
-                <li>
-                    <img src="images/Album_3.jpg" alt="AKMU_singleAlbum2">
-                </li>
-                <li>
-                    <img src="images/Album_2.jpg" alt="AKMU_singleAlbum1">
-                </li>
-                <li>
-                    <img src="images/Album_1.jpg" alt="AKMU_1stFullAlbum">
+                <li class="listActive">
+                    <p></p>
+                    <p></p>
                 </li>
             </ul>
         </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide albumActive">
+                    <img src="images/Album_8.jpg" alt="AKMU_3rdFullAlbum">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Album_7.png" alt="AKMU_singleAlbum5">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Album_6.jpg" alt="AKMU_singleAlbum4">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Album_5.jpg" alt="AKMU_2ndFullAlbum">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Album_4.jpg" alt="AKMU_singleAlbum3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Album_3.jpg" alt="AKMU_singleAlbum2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Album_2.jpg" alt="AKMU_singleAlbum1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Album_1.jpg" alt="AKMU_1stFullAlbum">
+                </div>
+            </div>
+        </div>
+        <ol>
+            <li>
+                <div class="swiper-button-next"></div>
+            </li>
+            <li>
+                <div class="swiper-button-prev"></div>
+            </li>
+        </ol>
+        
+        
     </section>
 
     <section class="gallery">
         <h2>GALLERY</h2>
-        <ul>
-            <li>
-                <a id="single_image" href="image_big.jpg">
-                    <img src="images/Gallery_1.jpg" alt="galleryImage1">
-                </a>
-            </li>
-            <li>
-                <a id="single_image" href="image_big.jpg">
-                    <img src="images/Gallery_2.jpg" alt="galleryImage2">
-                </a>
-            </li>
-            <li>
-                <a id="single_image" href="image_big.jpg">
-                    <img src="images/Gallery_3.jpg" alt="galleryImage3">
-                </a>
-            </li>
-            <li>
-                <a id="single_image" href="image_big.jpg">
-                    <img src="images/Gallery_4.jpg" alt="galleryImage4">
-                </a>
-            </li>
-            <li>
-                <a id="single_image" href="image_big.jpg">
-                    <img src="images/Gallery_5.jpg" alt="galleryImage5">
-                </a>
-            </li>
-            <li>
-                <a id="single_image" href="image_big.jpg">
-                    <img src="images/Gallery_6.jpg" alt="galleryImage6">
-                </a>
-            </li>
-        </ul>
+        <a data-fancybox="gallery" href="images/Gallery_1_big.jpg"><img src="images/Gallery_1_big.jpg"></a>
+        <a data-fancybox="gallery" href="images/Gallery_2_big.jpg"><img src="images/Gallery_2_big.jpg"></a>    
+        <a data-fancybox="gallery" href="images/Gallery_3_big.jpg"><img src="images/Gallery_3_big.jpg"></a>
+        <a data-fancybox="gallery" href="images/Gallery_4_big.jpg"><img src="images/Gallery_4_big.jpg"></a>
+        <a data-fancybox="gallery" href="images/Gallery_5_big.jpg"><img src="images/Gallery_5_big.jpg"></a>
+        <a data-fancybox="gallery" href="images/Gallery_6_big.jpg"><img src="images/Gallery_6_big.jpg"></a>
     </section>
+
+    <footer>
+        <div>
+            <h2>
+                <a href="index.html#main">
+                    <img src="images/AKMU_logo.png" alt="akmu_logo_sub">
+                </a>
+            </h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html#main">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#album">ALBUM</a></li>
+                    <li><a href="index.html#play">PLAY</a></li>
+                    <li><a href="index.html#gallery">GALLERY</a></li>
+                </ul>
+            </nav>
+            <ol>
+                <li>
+                    <a href="https://www.youtube.com/user/officialAKMU">youtube</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/official_akmu">twitter</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/officialAKMU">facebook</a>
+                </li>
+
+                <li>
+                    <a href="https://www.vlive.tv/channel/F36179">v-live</a>
+                </li>
+            </ol>
+            <p>Contact to E-Mail / Tel<br>pastel747@naver.com / 010.0000.0000</p>
+            <p>Copyright ©2020 All rights reserved | Nayeon-Park</p>
+        </div>
+    </footer>
 </body>
 </html>
