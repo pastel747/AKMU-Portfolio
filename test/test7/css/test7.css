@@ -1,0 +1,60 @@
+.fancybox-button svg{
+    background-color: red;
+}
+.fancybox-button--zoom{
+    display: none;
+}
+.fancybox-button--thumbs{
+    display: none;
+}
+.fancybox-infobar{
+    display: none;
+}
+/* div class ="fancybox-container fancybox-is-open fancybox-is-zoomable fancybox-can-zoomIn" 
+id="fancybox-container-2" */
+
+
+
+
+/* 
+
+
+하위1 div class="fancybox-bg"
+하위2 div class="fancybox-inner"
+    하위 2-1 div class="fancybox-infobar"
+        구조 span숫자 + / + span숫자
+        
+    하위 2-2 div class="fancybox-toolbar"
+        1.  하위 button data-fancybox-zoom / class="fancybox-button fancybox-button--zoom"
+            구조 button > svg > path
+        2.  하위 button data-fancybox-play / class="fancybox-button fancybox-button--play"
+            구조 button > svg(첫번째는 재생버튼 두번째는 정지버튼) > path
+        3.  하위 button data-fancybox-thumbs / class="fancybox-button fancybox-button--thumbs"
+            구조 button > svg(첫번째는 재생버튼 두번째는 정지버튼) > path
+        4.  하위 button data-fancybox-close / class="fancybox-button fancybox-button--close"
+            구조 button > svg > path
+
+    하위 2-3 div class="fancybox-navigation"
+        1.  하위 button data-fancybox-prev / class="fancybox-button fancybox-button--arrow_left"
+            구조 button > div > svg > path (왼쪽, 이전 버튼)
+        2.  하위 button data-fancybox-next / class="fancybox-button fancybox-button--arrow_right"
+            구조 button > div > svg > path (오른쪽, 다음 버튼)
+        
+    하위 2-4 div class="fancybox-stage"    ----첫번째 이미지가 보여질때라고 가정한다.
+        1.  하위 div class="fancybox-slide fancybox-slide--image fancybox-slide--current fancybox-slide--complete"
+            1.  하위 div class="fancybox-content" style="transform: translate(490px, 44px); width: 725.333px; height: 725.333px;"
+                1.  하위 img class="fancybox-image"
+            구조 div > div> img(본인 이미지)
+        2.  하위 div class="fancybox-slide fancybox-slide--image"
+            1.  하위 div class="fancybox-content" style="transform: translate(490px, 44px); width: 725.333px; height: 725.333px;"
+                1.  하위 img class="fancybox-image"
+            구조 div > div> img(본인 이미지)
+        
+    하위 2-5 div class="fancybox-caption fancybox-caption--separate"
+        1.  하위 div class="fancybox-caption__body"    ----해당 test에서는 공란이다.
+
+    하위 2-6 div class="fancybox-progress"
+
+
+*/
+

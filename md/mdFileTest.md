@@ -52,3 +52,5 @@ swiper slide 사용시 script는 body 맨 마지막에 작성하여 html 다음�
 
   
    https://fancyapps.com/fancybox/ 참고
+
+   http://fancyapps.com/fancybox/3/ 성공 참조
