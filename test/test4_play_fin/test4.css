@@ -49,15 +49,24 @@ html, body {
       transform: rotate(90deg);
     }
   }
-ul.a li{
-    background-color: cadetblue;
+ul.a >li{
+    background-color: cadetblue; display: none;
 }
-ul.a li.active{
-    background-color: blue;
+ul.a >li.albumActive{
+    background-color: blue; display: block;
 }
-.swiper-wrapper div{
+.swiper-wrapper >div{
     background-color: darkblue;
 }
-.swiper-wrapper div.active{
+.swiper-wrapper >div.albumActive{
     background-color: crimson;
+}
+img{
+  width: 100%;
+}
+ul.a >li ol li{
+  background-color: #fff;
+}
+ul.a >li ol li.listActive{
+  background-color: blueviolet;
 }
