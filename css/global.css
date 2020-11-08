@@ -1,87 +1,67 @@
 
-html, body {
-    position: relative;
-    height: 100%;
-  }
-  body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color:#000;
-    margin: 0;
-    padding: 0;
-  }
-  .swiper-container {
-    width: 80%;
-    height: 50%;
-  }
-  
-  .swiper-slide {
-    width: 20%;
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    background-color: cadetblue;
-  
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-  
-  @media (max-width: 760px) {
-    .swiper-button-next {
-      right: -20px;
-      top: 50%;
-      transform: rotate(90deg);
-    }
-  
-    .swiper-button-prev {
-      left: -20px;
-      top: 50%;
-      transform: rotate(90deg);
-    }
-  }
-section.play > ul{
-    background-color: cadetblue; display: none;
+body *{
+  font-family: 'noto sans KR';
 }
-section.play > ol{
-    position: relative;
+
+body{position: relative;}
+a{
+  text-decoration: none;
 }
-section.play > ol li{
-    position: a;
+.font1{
+  font-size: 40px; font-weight: 900; color: #456cb0; margin-bottom: 60px;
 }
-ul.a >li.albumActive{
+
+
+@media screen and (min-width: 1920px){
+
+  header>div,
+  section.videoArea div,
+  section.aboutArea div{
+    max-width: 1240px; margin: 0 auto; 
+  }
+
+  header{
+    z-index: 10;
+    width: 100%; box-shadow: 0px 5px 10px 0px rgba(60, 60, 60, .2); position: fixed; top: 0; left: 0; background-color: #ffffff; 
+  }
+  header>div::after{
+    content: ''; visibility: hidden; clear: both; display: block;
+  }
+  header > div > *{
+    float: left;
+  }
+  header>div h1{
+    max-width: 105px; line-height: 80px;
+  }
+  header>div h1 a{
     display: block;
+  }
+  header>div h1 a img{
+    width: 100%;
+  }
+  header>div input,
+  header>div label{
+    display: none;
+  }
+  header>div nav{
+    padding-left: 63%; line-height: 80px;
+  }
+  header>div nav ul li{
+    display: inline-block; text-align: right; 
+  }
+  header>div nav ul li a{
+    font-size: 16px; font-weight: 500; opacity: 0.4; color: #456cb0; box-sizing: border-box;
+  }
+  header>div nav ul li a.navActive,
+  header>div nav ul li a:hover{
+    opacity: 1; border-bottom: 2px solid #456cb0; 
+  }
+  header>div nav ul li:not(:first-child){
+    margin-left: 20px; 
+  }
+
+
+
+
+
 }
-/* .swiper-wrapper >div{
-    
-}
-.swiper-wrapper >div.albumActive{
-    
-} */
-section.play img{
-  width: 100%;
-}
-ul.a >li ol li{
-  background-color: #fff;
-}
-ul.a >li ol li.listActive{
-  background-color: blueviolet;
-}
-.swiper-button-prev{
-    left: 120px; top: -100px;
-}
-.swiper-button-next{
-    left: 1433px; top: -100px;
-}
-/* relative를 어디에 잡아야 반응형에서 적절할까 */

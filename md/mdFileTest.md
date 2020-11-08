@@ -54,3 +54,102 @@ swiper slide 사용시 script는 body 맨 마지막에 작성하여 html 다음�
    https://fancyapps.com/fancybox/ 참고
 
    http://fancyapps.com/fancybox/3/ 성공 참조
+
+
+
+
+
+
+    /* 
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-container {
+    width: 80%;
+    height: 50%;
+    
+  }
+  
+  .swiper-slide {
+    width: 20%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    background-color: cadetblue;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  } */
+  /* @media (max-width: 760px) {
+    .swiper-button-next {
+      right: -20px;
+      top: 50%;
+      transform: rotate(90deg);
+    }
+  
+    .swiper-button-prev {
+      left: -20px;
+      top: 50%;
+      transform: rotate(90deg);
+    }
+  } */
+/* 
+section.play > ul{
+    background-color: cadetblue;
+}
+section.play ul.playlist>li{
+  background-color: cadetblue; display: none;
+}
+section.play ul.playlist>li.albumActive{
+  background-color: blue; display: block;
+}
+section.play > ol{
+    position: relative;
+}
+section.play > ol li{
+    position: absolute;
+}
+
+section.play img{
+  width: 100%;
+}
+ul.playlist >li ol li{
+  background-color: #fff;
+}
+ul.playlist >li ol li.listActive{
+  background-color: blueviolet;
+}
+
+
+header,
+section.videoArea,
+section.about,
+article.album,
+section.gallery,
+footer{
+  display: none;
+}
+section.play >img{
+  width: 30%;
+}
+section.play{
+  margin-bottom: 50px;
+} */

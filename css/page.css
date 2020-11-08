@@ -1,0 +1,60 @@
+
+
+@media screen and (min-width:1240px){
+    
+    section.videoArea{
+        margin-bottom: 150px;
+    }
+
+    section.videoArea{
+        padding-top: 80px; 
+    }
+    section.aboutArea figure::after{
+        content: ''; visibility: hidden; display: block; clear: both;
+    }
+    section.aboutArea figure>*{
+        float: left; 
+    }
+    section.aboutArea figure img{
+        width: 100%; max-width: 610px;
+    }
+    section.aboutArea figure figcaption{
+        width: 49.19%; padding: 20px 0 0 20px;
+    }
+    section.aboutArea figure figcaption ul{
+        margin-bottom: 60px;
+    }
+    section.aboutArea figure figcaption ul::after{
+        content: ''; visibility: hidden; display: block; clear: both;
+    }
+    /* section.aboutArea figure figcaption ul{
+        list-style: none;
+    }
+    section.aboutArea figure figcaption ul li,
+    section.aboutArea figure figcaption ul li>*{
+        float: left;
+    } */
+
+    section.aboutArea figure figcaption ul li{
+        float: left; list-style: none; width: 100%; font-size: 25px;
+    }
+    section.aboutArea figure figcaption ul li h3{
+        max-width: 200px; opacity: 0.8; width: 35.08%; font-weight: 500; 
+    }
+    /* section.aboutArea figure figcaption ul li h3::after{
+        content: '1999.09.12'; opacity: 0.5; font-weight: 500; padding-left: 100px;
+    } */
+    section.aboutArea figure figcaption ul li span{
+        padding-left: 300px; opacity: 0.5; display: block; width: 64.91%;
+    }
+    section.aboutArea figure figcaption p{
+        line-height: 30px; 
+    }
+
+
+
+
+
+
+
+}
