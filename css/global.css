@@ -8,7 +8,7 @@ a{
   text-decoration: none;
 }
 .font1{
-  font-size: 40px; font-weight: 900; color: #456cb0; margin-bottom: 60px;
+  font-size: 40px; font-weight: 900; margin-bottom: 60px;
 }
 
 
@@ -16,7 +16,8 @@ a{
 
   header>div,
   section.videoArea div,
-  section.aboutArea div{
+  section.aboutArea div,
+  article.albumArea>div{
     max-width: 1240px; margin: 0 auto; 
   }
 

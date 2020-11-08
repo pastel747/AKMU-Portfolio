@@ -2,12 +2,21 @@
 
 @media screen and (min-width:1240px){
     
-    section.videoArea{
+    section.videoArea,
+    section.aboutArea{
         margin-bottom: 150px;
     }
 
     section.videoArea{
-        padding-top: 80px; 
+        padding-top: 80px; position: relative;
+    }
+
+    section.aboutArea div h2{
+        color: #456cb0;
+    }
+    section.aboutArea div>span{
+        color:#456cb0; font-weight: 900; font-size: 300px; transform: rotate(90deg); opacity: 0.25; 
+        position: absolute; top: 3%; right: -5%;
     }
     section.aboutArea figure::after{
         content: ''; visibility: hidden; display: block; clear: both;
@@ -27,23 +36,12 @@
     section.aboutArea figure figcaption ul::after{
         content: ''; visibility: hidden; display: block; clear: both;
     }
-    /* section.aboutArea figure figcaption ul{
-        list-style: none;
-    }
-    section.aboutArea figure figcaption ul li,
-    section.aboutArea figure figcaption ul li>*{
-        float: left;
-    } */
-
     section.aboutArea figure figcaption ul li{
         float: left; list-style: none; width: 100%; font-size: 25px;
     }
     section.aboutArea figure figcaption ul li h3{
         max-width: 200px; opacity: 0.8; width: 35.08%; font-weight: 500; 
     }
-    /* section.aboutArea figure figcaption ul li h3::after{
-        content: '1999.09.12'; opacity: 0.5; font-weight: 500; padding-left: 100px;
-    } */
     section.aboutArea figure figcaption ul li span{
         padding-left: 300px; opacity: 0.5; display: block; width: 64.91%;
     }
@@ -53,6 +51,64 @@
 
 
 
+    article.albumArea{
+        background: url('../images/Album_8.jpg') no-repeat center;
+        background-size: cover; padding-top: 150px;
+    }
+    article.albumArea>div h2{
+        color: #ffffff;
+    }
+    article.albumArea>div>div{
+        max-width: 505px;
+    }
+
+
+
+
+
+
+
+
+    .swiper-container{
+        width: 100%;
+        height: 50%;
+    }
+    .swiper-slide {
+        width: 20%;
+        text-align: center;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    section.playArea .swiper-total{
+        max-width: 1240px; margin: 0 auto; position: relative;
+    }
+    .swiper-slide .swiper-slide{
+        width: 100%;
+    }
+    section.playArea .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
+        width: 100%;
+    }
+    section.playArea .swiper-total .swiper-button-prev{
+        left: -5%;
+    }
+    section.playArea .swiper-total .swiper-button-next{
+        right: -5%;
+    }
+
+
+    section.gallery
+    
 
 
 
