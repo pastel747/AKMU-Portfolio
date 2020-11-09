@@ -153,3 +153,12 @@ section.play >img{
 section.play{
   margin-bottom: 50px;
 } */
+
+
+
+ play list 중 ol li 안에 p:first에 패딩을 사용하고 before로 이미지를 넣어주면 p:first의 패딩은 클릭이 가능하다. 즉 오디오 선택 가능
+다만 background는 image와 다르게 이미지의 width와 height값(px 값)을 가져야하는 등 공간에 대한 규정이 필요하고 image는 스스로 값을 갖고 있기 때문에 딱히 필요가 없다. 
+
+ 요약-
+background를 쓸때는 content만으로는 공간을 잡을 수 없어서 width height값을 넣어줘야한다.
+    

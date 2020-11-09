@@ -12,12 +12,14 @@ a{
 }
 
 
-@media screen and (min-width: 1920px){
+@media screen and (min-width: 1240px){
 
   header>div,
-  section.videoArea div,
-  section.aboutArea div,
-  article.albumArea>div{
+  section.videoArea>div,
+  section.aboutArea>div,
+  article.albumArea>div,
+  section.playArea,
+  section.galleryArea h2{
     max-width: 1240px; margin: 0 auto; 
   }
 
