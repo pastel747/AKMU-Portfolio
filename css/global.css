@@ -19,7 +19,8 @@ a{
   section.aboutArea>div,
   article.albumArea>div,
   section.playArea,
-  section.galleryArea h2{
+  section.galleryArea h2,
+  footer>div{
     max-width: 1240px; margin: 0 auto; 
   }
 
@@ -64,6 +65,56 @@ a{
   }
 
 
+
+  footer{
+    background-color: #25375d; padding-top: 60px; min-height: 240px; box-sizing: border-box;
+  }
+  footer div{
+    color: #ffffff;
+  }
+  footer>div h1{
+    max-width: 105px; line-height: 80px;
+  }
+  footer>div>* a{
+    color: #ffffff; 
+  }
+  footer>div *{
+    float: left;
+  }
+  footer>div nav{
+    padding-left: 25%; line-height: 80px;
+  }
+  footer>div nav ul li{
+    display: inline-block; text-align: right; 
+  }
+  footer>div nav ul li a{
+    font-size: 16px; font-weight: 500; opacity: 0.4; box-sizing: border-box;
+  }
+  footer>div nav ul li a.navActive,
+  footer>div nav ul li a:hover{
+    opacity: 1;
+  }
+  footer>div nav ul li:not(:first-child){
+    margin-left: 20px; 
+  }
+  footer>div ol{
+    list-style: none;
+  }
+  footer>div ol li a{
+    display: block;
+  }
+  footer>div ol li:nth-child(1) a{
+    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  }
+  footer>div ol li:nth-child(2) a{
+    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  }
+  footer>div ol li:nth-child(3) a{
+    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  }
+  footer>div ol li:nth-child(4) a{
+    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  }
 
 
 
