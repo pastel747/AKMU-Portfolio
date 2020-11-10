@@ -132,10 +132,3 @@ a{
 
 
 
-.videoArea{
-  overflow: hidden; max-height: 697px; position: relative;
-}
-.videoArea > video{width: 100%;}
-.videoArea > div video{
-  position: absolute; left: 0; top: 0; max-height: 697px;
-}

@@ -1,6 +1,7 @@
 $(document).ready(function(){
     swiperTEST4();
     test();
+    VideoPlaytest();
 });
 function swiperTEST4(){
     var swiper = new Swiper('.swiper-container', {
@@ -41,4 +42,12 @@ function test2(){
         $('ul.a >li.albumActive ol li').removeClass('listActive'); 
         $(this).addClass('listActive');
     });
+}
+
+function VideoPlaytest(){
+    if($('section.videoArea>div>video').play()){
+        $('section.videoArea>video').play();
+    }else{
+        $('section.videoArea>video').pause();
+    }
 }

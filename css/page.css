@@ -7,8 +7,17 @@
     }
 
     section.videoArea{
-        padding-top: 80px;
+        padding-top: 80px; overflow: hidden; max-height: 697px; position: relative; 
     }
+    section.videoArea>video{
+        display: block; filter: blur(5px);
+    }
+    section.videoArea > div video{
+        position: absolute; left: calc(100%-17.70%); top: 10.5%; 
+        max-height: 697px; margin: 0 auto; z-index: 10;
+    }
+
+
 
     section.aboutArea{
         overflow: hidden;
