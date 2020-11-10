@@ -78,7 +78,7 @@ a{
   footer>div>* a{
     color: #ffffff; 
   }
-  footer>div *{
+  footer>div>*{
     float: left;
   }
   footer>div nav{
@@ -98,24 +98,44 @@ a{
     margin-left: 20px; 
   }
   footer>div ol{
-    list-style: none;
+    list-style: none; width: 12.90%; line-height: 80px;
+  }
+  
+  footer>div ol li:not(:first-of-type){
+    margin-left: 20px;
   }
   footer>div ol li a{
     display: block;
   }
-  footer>div ol li:nth-child(1) a{
-    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  footer>div ol li:nth-child(1){
+    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
   }
-  footer>div ol li:nth-child(2) a{
-    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  footer>div ol li:nth-child(2){
+    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
   }
-  footer>div ol li:nth-child(3) a{
-    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  footer>div ol li:nth-child(3){
+    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
   }
-  footer>div ol li:nth-child(4) a{
-    background-image: url('../images/bul_sns1.png') no-repeat; text-indent: -9999;
+  footer>div ol li:nth-child(4){
+    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
+  }
+
+  footer>div>p{
+    opacity: 0.5; clear: both; width: 40%;
+  }
+  footer>div>p:last-of-type{
+    text-align: right; padding-left: 20%;
   }
 
 
+}
 
+
+
+.videoArea{
+  overflow: hidden; max-height: 697px; position: relative;
+}
+.videoArea > video{width: 100%;}
+.videoArea > div video{
+  position: absolute; left: 0; top: 0; max-height: 697px;
 }

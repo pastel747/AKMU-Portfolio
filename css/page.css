@@ -69,11 +69,23 @@
         color: #ffffff;
     }
     article.albumArea>div>div{
-        max-width: 637px; color: #ffffff; position: relatives;
+        color: #ffffff; position: relative;
+        padding-right: calc(100% - 637px);
+        /* width: 637px; margin: 0; */
+        /* width 637을 삭제하고 전체를 width로 가진 다음에 패딩으로 텍스트들을 가둔다. */
     }
-    /* article.albumArea>div>div:last-of-type::after{
-        content: ''; background: url('../images/Album_8.jpg') no-repeat; width: 100%; height: 100%; position: absolute; right:0; top: 0;
+    /* article.albumArea>div>div h3::after{
+        position: absolute;
+        content: ''; display: block; background: url('../images/Album_8.jpg') no-repeat; width: 100%; height: 100%; 
+        max-width: 505px; max-height: 505px; position: absolute; left: 100%; top: 0; 
     } */
+
+    article.albumArea>div>div::after{
+        content: ''; display: block; background: url('../images/Album_8.jpg') no-repeat center; height: 100%; 
+        background-size: cover;
+        width: calc(100% - 657px); position: absolute; right: 0; top: 0; 
+        /* width 값을 div + 간격 만큼 전체에서 삭제 후 position left가 아닌 right로 적용한다 */
+    }
     article.albumArea>div>div h3{
         font-size: 25px; margin-bottom: 20px; opacity: 0.8;
     }
@@ -86,9 +98,7 @@
     article.albumArea>div>div p:first-of-type{
         padding-top: 20px;box-sizing: border-box;
     }
-    /* article.albumArea>div>div p:first-of-type::before{
-        content: ''; border: 1px solid rgba(255, 255, 255, 0.5); left: 0; top: -19px; 
-    } */
+    
     
     article.albumArea>div>div p:first-of-type::before{
         content: ''; display: block; width: 30px; border-top: 2px solid rgba(2555, 255, 255, 0.5); box-sizing: border-box; margin-bottom: 20px;
@@ -104,11 +114,11 @@
         color: #456cb0;
     }
     section.playArea img{
-        max-width: 610px; max-height: 670px; width: 100%;
+        max-width: 610px; max-height: 670px; width: 100%; float: left;
     }
     section.playArea>ul.playlist{
-        list-style: none; width: 50.80%; float: right; background-color: #27203f; max-height: 495px; 
-        padding: 60px; box-sizing: border-box; 
+        list-style: none; width: 50.80%; float: left; background-color: #27203f; max-height: 495px; 
+        padding: 4.83%; box-sizing: border-box; 
     }
     section.playArea>ul.playlist>li.albumActive{
         display: block;
@@ -133,7 +143,6 @@
     }
     section.playArea>ul.playlist>li ol li{
         float: left; width: 100%; margin-bottom: 60px;
-        /* float 넣어야할까? */
     }
     section.playArea>ul.playlist>li ol li>*{
         float: left;
@@ -145,10 +154,10 @@
         opacity: 1; color: #a7d4ce;
     }
     section.playArea>ul.playlist>li ol li p:first-of-type{
-        position: relative; padding-left: 6.34%; width: 70%; white-space: nowrap; text-overflow: ellipsis;
+        position: relative; padding-left: 6.34%; width: 65%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
     section.playArea>ul.playlist>li ol li p:last-of-type{
-        width: 10%; margin: 0;
+        width: 10%; margin: 0; text-align: right; padding-left: 5%;
     }
     section.playArea>ul.playlist>li ol li p:first-of-type:before{
         content: ''; position: absolute; left: 0; top: 0; background: url('../images/play-button_03.png') no-repeat; 
@@ -156,31 +165,35 @@
     }
 
     section.playArea>div:nth-of-type(1){
-        float: left; position: relative;
-        min-height: 115px; width: 50.80%; background-color: #1d1633; float: left;
+        float: left; position: relative; min-height: 115px; width: 50.80%; background-color: #1d1633; margin-bottom: 60px;
+        padding: 20px 4.83%; box-sizing: border-box;
     }
-    section.playArea>div:nth-of-type(1)::after{
+    /* section.playArea>div:nth-of-type(1)::after{
         content: ''; display: block; visibility: hidden; clear: both;
-    }
+    } */
     section.playArea>div:nth-of-type(1) input[type='button']{
         position: absolute; left: 45%; top: 20%; 
         background-color: #a7d4ce; text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    section.playArea>div:nth-of-type(1) ul{
-        list-style: none;
-    }
     section.playArea>div:nth-of-type(1) ul li{
-        color: #ffffff;
+        color: #ffffff;list-style: none;
     }
-    section.playArea>div:nth-of-type(1) ul li>*{
+    section.playArea>div:nth-of-type(1) ul li>*:not(:last-child){
         float: left; 
     }
     section.playArea>div:nth-of-type(1) ul li.listActive span{
-        opacity: 0.5; margin-bottom: 20px;
+        opacity: 0.5; margin-bottom: 20px; display: block; width: 100%;
     }
-    section.playArea>div:nth-of-type(1) ul li.listActive::after{
+    section.playArea>div:nth-of-type(1) ul li.listActive p:first-of-type{
+        font-size: 25px;
+    }
+    section.playArea>div:nth-of-type(1) ul li.listActive p:last-of-type{
+        padding-left: 75%; float: right;
+    }
+    /* section.playArea>div:nth-of-type(1) ul li.listActive::after{
         content: ''; display: block; visibility: hidden; clear: both;
-    }
+    } */
+    
     
 
 
@@ -207,7 +220,7 @@
     }
     
     section.playArea .swiper-total{
-        position: relative;
+        position: relative; clear: both;
     }
     .swiper-slide .swiper-slide{
         width: 100%;

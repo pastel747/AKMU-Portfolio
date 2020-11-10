@@ -161,4 +161,4 @@ section.play{
 
  요약-
 background를 쓸때는 content만으로는 공간을 잡을 수 없어서 width height값을 넣어줘야한다.
-    
+       https://stackoverflow.com/questions/10797632/simulate-background-sizecover-on-video-or-img
