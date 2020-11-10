@@ -45,9 +45,5 @@ function test2(){
 }
 
 function VideoPlaytest(){
-    if($('section.videoArea>div>video').play()){
-        $('section.videoArea>video').play();
-    }else{
-        $('section.videoArea>video').pause();
-    }
+    
 }

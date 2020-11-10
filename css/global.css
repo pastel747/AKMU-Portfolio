@@ -25,7 +25,7 @@ a{
   }
 
   header{
-    z-index: 10;
+    z-index: 100;
     width: 100%; box-shadow: 0px 5px 10px 0px rgba(60, 60, 60, .2); position: fixed; top: 0; left: 0; background-color: #ffffff; 
   }
   header>div::after{
@@ -98,26 +98,26 @@ a{
     margin-left: 20px; 
   }
   footer>div ol{
-    list-style: none; width: 12.90%; line-height: 80px;
+    list-style: none; width: 12.90%; line-height: 80px; 
+  }
+  footer>div ol li{
+    display: inline-block; line-height: 80px; width: 25px;
   }
   
-  footer>div ol li:not(:first-of-type){
-    margin-left: 20px;
-  }
   footer>div ol li a{
-    display: block;
+    display: block; background-repeat: no-repeat; width: 25px; height: 25px; background-size: contain; text-indent: -9999px;
   }
   footer>div ol li:nth-child(1){
-    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
+    background: url('../images/bul_sns1.png'); 
   }
   footer>div ol li:nth-child(2){
-    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
+    background: url('../images/bul_sns2.png'); 
   }
   footer>div ol li:nth-child(3){
-    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
-  }
+    background: url('../images/bul_sns3.png');
+  } 
   footer>div ol li:nth-child(4){
-    background: url('../images/bul_sns1.png') no-repeat center; width: 25px; height: 25px; text-indent: -9999px;
+    background: url('../images/bul_sns4.png'); 
   }
 
   footer>div>p{
