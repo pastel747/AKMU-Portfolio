@@ -202,8 +202,22 @@
     /* section.playArea>div:nth-of-type(1) ul li.listActive::after{
         content: ''; display: block; visibility: hidden; clear: both;
     } */
-    
-    
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: #ffffff;
+    }
+   
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background-color:#27203f;
+        border: 2px solid #ffffff;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: #8171bb; opacity: 0.5;
+    }
 
 
     .swiper-container{
