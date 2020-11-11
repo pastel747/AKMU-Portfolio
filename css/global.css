@@ -72,7 +72,7 @@ a{
   footer div{
     color: #ffffff;
   }
-  footer>div h1{
+  footer>div h2{
     max-width: 105px; line-height: 80px;
   }
   footer>div>* a{
@@ -97,37 +97,45 @@ a{
   footer>div nav ul li:not(:first-child){
     margin-left: 20px; 
   }
+
   footer>div ol{
-    list-style: none; width: 12.90%; line-height: 80px; 
+    list-style: none; margin: 0 0 60px 300px;
   }
   footer>div ol li{
-    display: inline-block; line-height: 80px; width: 25px;
+    display: inline-block; text-indent: -9999px; width: 25px; line-height: 80px;
+    background-size: contain; background-repeat: no-repeat; background-position: center;
   }
   footer>div ol li a{
-    display: block; background-repeat: no-repeat; width: 25px; height: 25px; background-size: contain; text-indent: -9999px;
+    display: block; 
   }
   footer>div ol li:nth-child(1){
-    background: url('../images/bul_sns1.png'); 
+    background-image: url('../images/bul_sns1.png'); 
   }
   footer>div ol li:nth-child(2){
-    background: url('../images/bul_sns2.png'); 
+    background-image: url('../images/bul_sns2.png'); 
   }
   footer>div ol li:nth-child(3){
-    background: url('../images/bul_sns3.png');
+    background-image: url('../images/bul_sns3.png');
   } 
   footer>div ol li:nth-child(4){
-    background: url('../images/bul_sns4.png'); 
+    background-image: url('../images/bul_sns4.png'); 
+  }
+  footer>div ol li:not(:first-of-type){
+    margin-left: 20px;
   }
 
   footer>div>p{
-    opacity: 0.5; clear: both; width: 40%;
+    opacity: 0.5; 
   }
   footer>div>p:last-of-type{
-    text-align: right; padding-left: 20%;
+    padding-left: 45%; line-height: 32px; box-sizing: border-box;
+  }
+  footer>div::after{
+    content: ''; display: block; visibility: hidden; clear: both;
   }
 
-
 }
+
 
 
 

@@ -162,3 +162,14 @@ section.play{
  요약-
 background를 쓸때는 content만으로는 공간을 잡을 수 없어서 width height값을 넣어줘야한다.
        https://stackoverflow.com/questions/10797632/simulate-background-sizecover-on-video-or-img
+
+
+
+
+ 사용자 지정 data-..
+  const는 정해져 있는 값, 변수가 아니다. attr 속성 가져오는 법은 원래 const 이지만 var로도 가능
+  
+   overflow-y: auto;는 overflow-y: scroll;과는 다르게 height 값을 자동으로 
+   측정하여 스크롤을 없애주기도 한다. 
+
+ siblings() 함수는 앞서 선택된 것의 동위 선상 형제자매들을 선택해준다.
