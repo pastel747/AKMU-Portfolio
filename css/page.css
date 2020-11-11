@@ -16,7 +16,7 @@
         display: block; filter: blur(5px);
     }
     section.videoArea > div video{
-        position: absolute; left: calc(100%-17.70%); top: 10.5%; 
+        position: absolute; left: calc(100% - 17.70%); top: 10.5%; 
         max-height: 697px; margin: 0 auto; z-index: 10;
     }
 
@@ -113,7 +113,7 @@
     
     
     article.albumArea>div>div p:first-of-type::before{
-        content: ''; display: block; width: 30px; border-top: 2px solid rgba(2555, 255, 255, 0.5); box-sizing: border-box; margin-bottom: 20px;
+        content: ''; display: block; width: 30px; border-top: 2px solid rgba(255, 255, 255, 0.5); box-sizing: border-box; margin-bottom: 20px;
     }
     article.albumArea>div>div p:not(:last-of-type){
         margin-bottom: 20px;
@@ -274,6 +274,7 @@
     section.galleryArea a img{
         width: 100%;
     }
+
 
 
 

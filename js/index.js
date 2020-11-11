@@ -2,8 +2,8 @@ $(document).ready(function(){
     swiperTEST4();
     test();
     test2();
-    test3();
-    // test4();
+    // test3();
+    test4();
 });
 
 function swiperTEST4(){
@@ -51,15 +51,40 @@ function test2(){
 function test3(){
     var test = $('section.playArea>img');
     var test2 = $('.swiper-wrapper div.albumActive img').attr('src');
+
     $('.swiper-wrapper div').click(function(){
         test.attr('src', test2);
     });
 }
 
+
+
+// function test4(){
+//     var test = $('section.playArea>img');
+
+//     $('.swiper-wrapper div').click(function(){
+//         var test2 = $(this).find('img').attr('src');
+//         test.attr('src', test2);
+//     });
+// }
+
 function test4(){
     var test = $('section.playArea>img');
+
     $('.swiper-wrapper div').click(function(){
         var test2 = $(this).find('img').attr('src');
         test.attr('src', test2);
     });
 }
+
+
+function test5(){
+    var listNameChange = document.getElementById('listName');
+    var listNameOrigin = $('section.playArea>ul.albumActive ol li.listActive p:first-of-type').innerText();
+    
+    $
+    listNameChange.innerText = listNameOrigin;
+
+    document.write(element.innerText);
+}
+
