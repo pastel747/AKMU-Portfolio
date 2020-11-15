@@ -7,8 +7,8 @@ $(document).ready(function(){
     // test5();
     // test6();
     test7();
-    // myFunction();
     videoSk();
+    playTrack();
 });
 
 function swiperTEST4(){
@@ -45,41 +45,11 @@ function test(){
     });
 }
 
-
 function test2(){  
     var test = $('section.playArea>ul.playlist>li ol li');
     test.click(function(){ 
         test.removeClass('listActive'); 
         $(this).addClass('listActive');
-
-    });
-}
-
-// function test(){}
-//     $('.swiper-wrapper div').click(function(){
-//         $('.playArea>ul.playlist>li').removeClass('albumActive');
-//         $(this).addClass('albumActive'); 
-//         $('.playArea>ul.playlist>li').eq($(this).index()).addClass('albumActive'); 
-
-//     });
-// }
-
-
-function test7(){
-    var albumList = $('section.playArea>ul.playlist li>ol>li');
-    var getlistContentChange = $('section.playArea>ulplaylist li.albumActive ol li p:first-of-type');
-    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p.listName');
-
-    albumList.click(function(){
-        document.getElementById("playName").removeAttribute("id"); 
-        // getlistContentChange.removeAttr('playName');
-        var playNameId = $(this).children('p:first-of-type');
-        playNameId.attr('id','playName'); 
-        // alert(playNameId);
-    
-        var getText = document.getElementById("playName").textContent;
-        alert(getText); 
-        document.getElementById('listName').innerHTML=getText;
     });
 }
 
@@ -100,8 +70,6 @@ function test3(){
         test.attr('src', test2);
     });
 }
-
-
 
 // function test4(){
 //     var test = $('section.playArea>img');
@@ -134,22 +102,6 @@ function test4(){
 //     });
 // }
 
-
-function myFunction(){
-    var albumList = $('section.playArea>ul.playlist li>ol>li');
-    var getlistContentChange = $('section.playArea>ul.playlist li ol li p:first-of-type');
-    
-    // var albumList = document.createElement("");
-    // div.id = 'listActive'; 
-
-    albumList.click(function(){
-        getlistContentChange.attr('id', 'playActive');
-        var x = document.getElementById("listActive").textContent;
-        document.getElementById("listActive").innerHTML = x;
-    });
-}
-
-
 function videoSk(){
     var videoAreaSmallSelect = $('section.videoArea>div>video');
     var videoAreaBgSelect = $('section.videoArea>video');
@@ -163,5 +115,46 @@ function videoSk(){
             videoAreaBgSelect.play();
         }
         
+    });
+}
+
+
+function test7(){
+    var albumList = $('section.playArea>ul.playlist li>ol>li');
+    var getlistContentChange = $('section.playArea>ulplaylist li.albumActive ol li p:first-of-type');
+    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p.listName');
+
+    albumList.click(function(){
+        document.getElementById("playName").removeAttribute("id"); 
+        // getlistContentChange.removeAttr('playName');
+        var playNameId = $(this).children('p:first-of-type');
+        playNameId.attr('id','playName'); 
+        // alert(playNameId);
+    
+        var getText = document.getElementById("playName").textContent;
+        document.getElementById('listName').innerHTML=getText;
+    });
+}
+
+function playTrack(){
+    var trackIndex = $('section.playArea>div:first-of-type>ul li span.listTrack');
+    var albumList = $('section.playArea>ul.playlist li>ol>li');
+    
+    albumList.click(function(){
+        var getIndex = $(this).index();
+        getIndex+=1;
+        // var putIndex = $('track.'+getIndex);
+
+        $('span#listTrack').empty();
+        // $('span#listTrack').innerHTML=putIndex;
+        // $('span#listTrack').innerHTML=$('track.'+ getIndex);
+
+        
+        // $('track.'+ getIndex);
+        // var putText = trackIndex.textContent;
+
+        // var putText = trackIndex.textContent;
+        document.getElementById('listTrack').innerHTML=getIndex;
+
     });
 }
