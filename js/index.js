@@ -8,6 +8,7 @@ $(document).ready(function(){
     // test6();
     test7();
     // myFunction();
+    videoSk();
 });
 
 function swiperTEST4(){
@@ -78,7 +79,7 @@ function test7(){
     
         var getText = document.getElementById("playName").textContent;
         alert(getText); 
-        
+        document.getElementById('listName').innerHTML=getText;
     });
 }
 
@@ -145,5 +146,22 @@ function myFunction(){
         getlistContentChange.attr('id', 'playActive');
         var x = document.getElementById("listActive").textContent;
         document.getElementById("listActive").innerHTML = x;
+    });
+}
+
+
+function videoSk(){
+    var videoAreaSmallSelect = $('section.videoArea>div>video');
+    var videoAreaBgSelect = $('section.videoArea>video');
+
+
+
+    $('section.videoArea').click(function(){
+        if(videoAreaSmallSelect.pause){
+            videoAreaBgSelect.pause();
+        }else{
+            videoAreaBgSelect.play();
+        }
+        
     });
 }

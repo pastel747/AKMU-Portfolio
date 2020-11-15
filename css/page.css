@@ -179,26 +179,30 @@
 
     section.playArea>div:nth-of-type(1){
         float: left; position: relative; min-height: 115px; width: 50.80%; background-color: #1d1633; margin-bottom: 60px;
-        padding: 20px 4.83%; box-sizing: border-box;
+        padding: 30px 4.83%; box-sizing: border-box;
     }
     section.playArea>div:nth-of-type(1) input[type='button']{
         position: absolute; left: 45%; top: 20%; 
         background-color: #a7d4ce; text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
     section.playArea>div:nth-of-type(1) ul li{
-        color: #ffffff;list-style: none;
+        color: #ffffff; list-style: none; 
     }
     section.playArea>div:nth-of-type(1) ul li>*:not(:last-child){
         float: left; 
     }
     section.playArea>div:nth-of-type(1) ul li.listActive span{
-        opacity: 0.5; margin-bottom: 20px; display: block; width: 100%;
+        opacity: 0.5; margin-bottom: 20px; display: block; width: 100%; 
     }
     section.playArea>div:nth-of-type(1) ul li.listActive p:first-of-type{
-        font-size: 25px;
+        color: #a7d4ce;
+        font-size: 16px; max-width: 190px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
     section.playArea>div:nth-of-type(1) ul li.listActive p:last-of-type{
-        padding-left: 75%; float: right;
+        padding-left: 50%; float: right;
+    }
+    section.playArea>div:nth-of-type(1) ul li::after{
+        content: ''; display: block; visibility: hidden; clear: both;
     }
 
 
