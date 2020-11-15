@@ -9,6 +9,7 @@ $(document).ready(function(){
     test7();
     videoSk();
     playTrack();
+    timeGet();
 });
 
 function swiperTEST4(){
@@ -121,9 +122,7 @@ function videoSk(){
 
 function test7(){
     var albumList = $('section.playArea>ul.playlist li>ol>li');
-    var getlistContentChange = $('section.playArea>ulplaylist li.albumActive ol li p:first-of-type');
-    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p.listName');
-
+    
     albumList.click(function(){
         document.getElementById("playName").removeAttribute("id"); 
         // getlistContentChange.removeAttr('playName');
@@ -143,7 +142,6 @@ function playTrack(){
     albumList.click(function(){
         var getIndex = $(this).index();
         getIndex+=1;
-        // var putIndex = $('track.'+getIndex);
 
         $('span#listTrack').empty();
         // $('span#listTrack').innerHTML=putIndex;
@@ -156,5 +154,17 @@ function playTrack(){
         // var putText = trackIndex.textContent; 
         document.getElementById('listTrack').innerHTML=getIndex;
 
+    });
+}
+
+function timeGet(){
+    var albumList = $('section.playArea>ul.playlist li>ol>li');
+    albumList.click(function(){
+        document.getElementById("playTime").removeAttribute("id"); 
+        var playTimeId = $(this).children('p:last-of-type');
+        playTimeId.attr('id','playTime'); 
+
+        var getTime = document.getElementById("playTime").textContent;
+        document.getElementById('listTime').innerHTML=getTime;
     });
 }
