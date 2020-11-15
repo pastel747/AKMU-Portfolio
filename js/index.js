@@ -5,7 +5,7 @@ $(document).ready(function(){
     // test3();
     test4();
     // test5();
-    test6();
+    // test6();
     test7();
     // myFunction();
 });
@@ -63,25 +63,11 @@ function test2(){
 //     });
 // }
 
-function test6(){
-    var albumList = $('section.playArea>ul.playlist li>ol>li');
-    var getlistContentChange = $('section.playArea>ul.albumActive ol li.listActive p:first-of-type');
-    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p:first-of-type');
-    
-
-    albumList.click(function(){
-        getlistContentChange.removeAttr('id');
-        playlistText.attr('id','playName');
-        // alert();
-
-
-    });
-}
 
 function test7(){
     var albumList = $('section.playArea>ul.playlist li>ol>li');
     var getlistContentChange = $('section.playArea>ulplaylist li.albumActive ol li p:first-of-type');
-    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p:first-of-type');
+    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p.listName');
 
     albumList.click(function(){
         document.getElementById("playName").removeAttribute("id"); 
@@ -92,12 +78,7 @@ function test7(){
     
         var getText = document.getElementById("playName").textContent;
         alert(getText); 
-
         
-        
-         
-
-
     });
 }
 
