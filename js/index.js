@@ -173,6 +173,6 @@ function playbuttonChange(){
     var playbutton = $('section.playArea>div:last-of-type(2) input');
 
     playbutton.click(function(){
-        playbutton.css('backgroundImage', 'url(../images/pp_03.png)');        
+        
     });
 }
