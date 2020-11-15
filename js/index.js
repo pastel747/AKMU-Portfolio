@@ -136,7 +136,7 @@ function test7(){
 }
 
 function playTrack(){
-    var trackIndex = $('section.playArea>div:first-of-type>ul li span.listTrack');
+    var trackIndex = $('section.playArea>div:last-of-type>ul li span.listTrack');
     var albumList = $('section.playArea>ul.playlist li>ol>li');
     
     albumList.click(function(){
@@ -166,5 +166,13 @@ function timeGet(){
 
         var getTime = document.getElementById("playTime").textContent;
         document.getElementById('listTime').innerHTML=getTime;
+    });
+}
+
+function playbuttonChange(){
+    var playbutton = $('section.playArea>div:last-of-type(2) input');
+
+    playbutton.click(function(){
+        playbutton.css('backgroundImage', 'url(../images/pp_03.png)');        
     });
 }

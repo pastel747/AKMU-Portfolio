@@ -126,7 +126,9 @@
 
 
 
-
+    section.playArea::after{
+        content: ''; display: block; visibility: hidden; clear: both;
+    }
     section.playArea h2{
         color: #456cb0;
     }
@@ -181,30 +183,35 @@
         width: 13px; height: 16px;
     }
 
-    section.playArea>div:nth-of-type(1){
-        float: left; position: relative; min-height: 115px; width: 50.80%; background-color: #1d1633; margin-bottom: 60px;
+    section.playArea>div:nth-of-type(2){
+        float: left; position: relative; min-height: 115px; width: 50.80%; background-color: #1d1633;
         padding: 30px 4.83%; box-sizing: border-box;
     }
-    section.playArea>div:nth-of-type(1) input[type='button']{
-        position: absolute; left: 45%; top: 20%; 
-        background-color: #a7d4ce; text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
+    section.playArea>div:nth-of-type(2) input[type='button']:hover{
+        background-color: #456cb0;
     }
-    section.playArea>div:nth-of-type(1) ul li{
+    section.playArea>div:nth-of-type(2) input[type='button']{
+        border:none; background-color: #a7d4ce;
+        position: absolute; left: 45%; top: 20%; background-image: url('../images/ll_03.png');
+        text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
+        
+    }
+    section.playArea>div:nth-of-type(2) ul li{
         color: #ffffff; list-style: none; 
     }
-    section.playArea>div:nth-of-type(1) ul li>*:not(:last-child){
+    section.playArea>div:nth-of-type(2) ul li>*:not(:last-child){
         float: left; 
     }
-    section.playArea>div:nth-of-type(1) ul li.listActive span{
+    section.playArea>div:nth-of-type(2) ul li.listActive span{
         opacity: 0.5; margin-bottom: 20px; display: block; width: 100%; 
     }
-    section.playArea>div:nth-of-type(1) ul li.listActive p:first-of-type{
+    section.playArea>div:nth-of-type(2) ul li.listActive p:first-of-type{
         color: #a7d4ce; font-size: 20px; max-width: 190px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
-    section.playArea>div:nth-of-type(1) ul li.listActive p:last-of-type{
+    section.playArea>div:nth-of-type(2) ul li.listActive p:last-of-type{
         padding-left: 50%; float: right;
     }
-    section.playArea>div:nth-of-type(1) ul li::after{
+    section.playArea>div:nth-of-type(2) ul li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
 
@@ -245,7 +252,7 @@
     }
     
     section.playArea .swiper-total{
-        position: relative; clear: both;
+        position: relative; clear: both; margin-bottom: 60px;
     }
     .swiper-slide .swiper-slide{
         width: 100%;
