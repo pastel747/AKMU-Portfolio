@@ -175,3 +175,7 @@ background를 쓸때는 content만으로는 공간을 잡을 수 없어서 width
  siblings() 함수는 앞서 선택된 것의 동위 선상 형제자매들을 선택해준다.
  
  find() 함수는 부모 하위 자식들을, children() 함수는 직계 자손들을 선택한다.
+
+ https://ofcourse.kr/js-course/innerHTML-%EC%86%8D%EC%84%B1 ????
+
+ https://velog.io/@raram2/%EB%8B%B9%EC%8B%A0%EC%9D%B4-innerHTML%EC%9D%84-%EC%93%B0%EB%A9%B4-%EC%95%88%EB%90%98%EB%8A%94-%EC%9D%B4%EC%9C%A0

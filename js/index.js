@@ -4,6 +4,10 @@ $(document).ready(function(){
     test2();
     // test3();
     test4();
+    // test5();
+    test6();
+    test7();
+    // myFunction();
 });
 
 function swiperTEST4(){
@@ -40,11 +44,69 @@ function test(){
     });
 }
 
+
 function test2(){  
     var test = $('section.playArea>ul.playlist>li ol li');
     test.click(function(){ 
         test.removeClass('listActive'); 
         $(this).addClass('listActive');
+
+    });
+}
+
+// function test(){}
+//     $('.swiper-wrapper div').click(function(){
+//         $('.playArea>ul.playlist>li').removeClass('albumActive');
+//         $(this).addClass('albumActive'); 
+//         $('.playArea>ul.playlist>li').eq($(this).index()).addClass('albumActive'); 
+
+//     });
+// }
+
+function test6(){
+    var albumList = $('section.playArea>ul.playlist li>ol>li');
+    var getlistContentChange = $('section.playArea>ul.albumActive ol li.listActive p:first-of-type');
+    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p:first-of-type');
+    
+
+    albumList.click(function(){
+        getlistContentChange.removeAttr('id');
+        playlistText.attr('id','playName');
+        // alert();
+
+
+    });
+}
+
+function test7(){
+    var albumList = $('section.playArea>ul.playlist li>ol>li');
+    var getlistContentChange = $('section.playArea>ulplaylist li.albumActive ol li p:first-of-type');
+    var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p:first-of-type');
+
+    albumList.click(function(){
+        document.getElementById("playName").removeAttribute("id"); 
+        // getlistContentChange.removeAttr('playName');
+        var playNameId = $(this).children('p:first-of-type');
+        playNameId.attr('id','playName'); 
+        // alert(playNameId);
+    
+        var getText = document.getElementById("playName").textContent;
+        alert(getText); 
+
+        
+        
+         
+
+
+    });
+}
+
+function test8(){
+    var test = $('section.playArea>ul.playlist li>ol>li');
+    var test2 = $('section.playArea>ul.playlist li.albumActive ol li.listActive p:first-of-type');
+
+    test.click(function(){
+
     });
 }
 
@@ -77,14 +139,30 @@ function test4(){
     });
 }
 
-
-function test5(){
-    var listNameChange = document.getElementById('listName');
-    var listNameOrigin = $('section.playArea>ul.albumActive ol li.listActive p:first-of-type').innerText();
+// function test5(){
+//     var albumList = $('section.playArea>ul.playlist li>ol>li');
+//     var getlistContentChange = $('section.playArea>ul.albumActive ol li.listActive p:first-of-type').innerText();
+//     var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p.listName');
     
-    $
-    listNameChange.innerText = listNameOrigin;
+//     albumList.click(function(){
+//         getlistContentChange.attr('id', 'test');
+//         var getText = document.getElementById("test").textContent;
+//         playlistText == getText;
 
-    document.write(element.innerText);
+//     });
+// }
+
+
+function myFunction(){
+    var albumList = $('section.playArea>ul.playlist li>ol>li');
+    var getlistContentChange = $('section.playArea>ul.playlist li ol li p:first-of-type');
+    
+    // var albumList = document.createElement("");
+    // div.id = 'listActive'; 
+
+    albumList.click(function(){
+        getlistContentChange.attr('id', 'playActive');
+        var x = document.getElementById("listActive").textContent;
+        document.getElementById("listActive").innerHTML = x;
+    });
 }
-
