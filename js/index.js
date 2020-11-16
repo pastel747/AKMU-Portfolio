@@ -6,9 +6,28 @@ $(document).ready(function(){
     listAndplayName();
     playTrackNumber();
     listtimeGet();
-    test8();
     audioTotal();
 });
+
+
+function test8(){
+    // var playButtonSelect = $('.playArea>div:last-child>input');
+    // var statusButton = playButtonSelect.css('background-image');
+    // var buttonPlay = playButtonSelect.css('background-image','url(../images/btn_play.png)');
+    // var buttonPause = playButtonSelect.css('background-image','url(../images/btn_pause.png)');
+    var inputButtonSelect = $('#playAreabuttonID');
+
+
+    inputButtonSelect.click(function(){
+        inputButtonSelect.addClass('playAreabuttonClass');
+        
+        for?
+        var test = inputButtonSelect.hasClass('playAreabutton');
+        if(test==true){
+
+        }
+    });
+}
 
 function swiperSetting(){
     var swiper = new Swiper('.swiper-container', {
@@ -148,23 +167,9 @@ function listtimeGet(){
     });
 }
 
-function test8(){
-    var playButtonSelect = $('section.playArea>div:last-child>input#playAreabutton');
-    var statusButton = playButtonSelect.css('background-image');
-    var buttonPlay = playButtonSelect.css('background-image','url(../images/btn_play.png)');
-    var buttonPause = playButtonSelect.css('background-image','url(../images/btn_pause.png)');
-
-    playButtonSelect.click(function(){
-        if(statusButton==buttonPlay){
-            buttonPause;
-        }else{
-            buttonPlay;
-        }
-    });
-}
-
 function audioTotal(){
     var audioList = $('section.playArea>ul.playlist>li>ol>li');
+    var inputButtonSelect = $('#playAreabuttonID');
 
     var albumArray = new Array(Full_Album1, Single_Album1, Single_Album2, Single_Album3, Full_Album2, Single_Album4, Single_Album5, Full_Album3);
     var Full_Album3 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3');
@@ -176,11 +181,8 @@ function audioTotal(){
     var Single_Album3 = new Array('../audio/file_example.mp3');
     var Single_Album2 = new Array('../audio/file_example2.mp3', '../audio/file_example.mp3','../audio/file_example2.mp3', '../audio/file_example.mp3','../audio/file_example2.mp3', '../audio/file_example.mp3');
     var Single_Album1 = new Array('../audio/file_example.mp3');
-
-
  
     audioList.click(function(){
-        
         var albumIndex = $('section.playArea>ul.playlist>li.albumActive').index();
         // alert(albumIndex);
         var listInAlbumIndex = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive').index();
@@ -188,7 +190,6 @@ function audioTotal(){
         
         // var audio = new Audio("../audio/file_example.mp3");
         var audio = new Audio("../audio/file_example.mp3");  //albumArray[albumIndex] 와 그 안에 audio file url 가져오기 find 쓰나?
-
 
         audio.loop = false;
         audio.volume = 0.3;

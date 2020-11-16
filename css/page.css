@@ -196,14 +196,16 @@
     section.playArea>div:nth-of-type(2) input[type='button']:hover{
         background-color: #456cb0;
     }
-    section.playArea>div:nth-of-type(2) input[type='button']{
+    section.playArea>div:nth-of-type(2) input{
         border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%; background-image: url('../images/btn_play.png');
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    /* section.playArea>div:nth-of-type(2) input[type='button'].playAreabutton{
-        background-image: url('../images/btn_pause.png');
-    } */
+    section.playArea>div:nth-of-type(2) input.playAreabutton{
+        background-image: url('../images/btn_pause.png');border:none; background-color: #a7d4ce;
+        position: absolute; left: 45%; top: 20%;
+        text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
+    }
     section.playArea>div:nth-of-type(2) ul li{
         color: #ffffff; list-style: none; 
     }
