@@ -13,10 +13,10 @@
         display: none;
     }
     section.videoArea>video{
-        display: block; filter: blur(5px);
+        display: block; filter: blur(5px); width: 100%; height: 100%;
     }
     section.videoArea > div video{
-        position: absolute; top: 10.5%; 
+        position: absolute; top: 10.5%;  width: 1240px; height: 700px;
         max-height: 697px; margin: 0 auto; z-index: 10;
         /* left 없어도 될까요? */
     }

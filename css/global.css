@@ -3,7 +3,7 @@ body *{
   font-family: 'noto sans KR';
 }
 
-body{position: relative;}
+body{position: relative; width: 100%;}
 a{
   text-decoration: none;
 }
@@ -11,6 +11,134 @@ a{
   font-size: 40px; font-weight: 900; margin-bottom: 60px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1239px){
+
+  header>div,
+  section.videoArea>div,
+  section.aboutArea>div,
+  article.albumArea>div,
+  section.playArea,
+  section.galleryArea h2,
+  footer>div{
+    max-width: 1120px; margin: 0 auto;
+  }
+
+  header{
+    z-index: 100;
+    width: 100%; box-shadow: 0px 5px 10px 0px rgba(60, 60, 60, .2); position: fixed; top: 0; left: 0; background-color: #ffffff; 
+  }
+  header>div::after{
+    content: ''; visibility: hidden; clear: both; display: block;
+  }
+  header > div > *{
+    float: left;
+  }
+  header>div h1{
+    max-width: 105px; line-height: 80px;
+  }
+  header>div h1 a{
+    display: block;
+  }
+  header>div h1 a img{
+    width: 100%;
+  }
+  header>div input,
+  header>div label{
+    display: none;
+  }
+  header>div nav{
+    padding-left: 40%; line-height: 80px; box-sizing: border-box;
+  }
+  header>div nav ul li{
+    display: inline-block; text-align: right; 
+  }
+  header>div nav ul li a{
+    font-size: 16px; font-weight: 500; opacity: 0.4; color: #456cb0; box-sizing: border-box;
+  }
+  header>div nav ul li a.navActive,
+  header>div nav ul li a:hover{
+    opacity: 1; border-bottom: 2px solid #456cb0; 
+  }
+  header>div nav ul li:not(:first-child){
+    margin-left: 20px; 
+  }
+
+
+
+  footer{
+    background-color: #25375d; padding-top: 30px; max-height: 200px; box-sizing: border-box;
+  }
+  footer div{
+    color: #ffffff;
+  }
+  footer>div h2{
+    max-width: 105px; line-height: 80px;
+  }
+  footer>div>* a{
+    color: #ffffff; 
+  }
+  footer>div>*{
+    float: left;
+  }
+  footer>div nav{
+    /* padding-left: 25%; line-height: 80px; */
+    display: none;
+  }
+  /* footer>div nav ul li{
+    display: inline-block; text-align: right; 
+  }
+  footer>div nav ul li a{
+    font-size: 16px; font-weight: 500; opacity: 0.4; box-sizing: border-box;
+  }
+  footer>div nav ul li a.navActive,
+  footer>div nav ul li a:hover{
+    opacity: 1;
+  }
+  footer>div nav ul li:not(:first-child){
+    margin-left: 20px; 
+  } */
+
+  footer>div ol{
+    list-style: none; margin: 0 0 30px 500px; 
+  }
+  footer>div ol li{
+    display: inline-block; text-indent: -9999px; width: 25px; line-height: 80px;
+    background-size: contain; background-repeat: no-repeat; background-position: center;
+  }
+  footer>div ol li a{
+    display: block; 
+  }
+  footer>div ol li:nth-child(1){
+    background-image: url('../images/bul_sns1.png'); 
+  }
+  footer>div ol li:nth-child(2){
+    background-image: url('../images/bul_sns2.png'); 
+  }
+  footer>div ol li:nth-child(3){
+    background-image: url('../images/bul_sns3.png');
+  } 
+  footer>div ol li:nth-child(4){
+    background-image: url('../images/bul_sns4.png'); 
+  }
+  footer>div ol li:not(:first-of-type){
+    margin-left: 20px;
+  }
+
+  footer>div>p{
+    opacity: 0.5; font-size: 13px;
+  }
+  footer>div>p:first-of-type{
+    padding-top: 15px;
+  }
+  footer>div>p:last-of-type{
+    padding-left: 28.5%; box-sizing: border-box; padding-top: 25px;
+  }
+  footer>div::after{
+    content: ''; display: block; visibility: hidden; clear: both;
+  }
+
+}
+/* tablet fin */
 
 @media screen and (min-width: 1240px){
 
@@ -135,7 +263,7 @@ a{
   }
 
 }
-
+/* pc fin */
 
 
 
