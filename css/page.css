@@ -74,19 +74,24 @@
         line-height: 30px; 
     }
 
+
+
     article.albumArea:before{
-        content: ''; display: block; background-color: rgba(0, 0, 0, 0.9); position: absolute; left: 0;top: 0; 
+        content: ''; display: block; background-color: rgba(0, 0, 0, 0.5); position: absolute; left: 0;top: 0; 
         width: 100%; height: 100%; 
     }
     article.albumArea{
         background: url('../images/Album_8.jpg') no-repeat center; position: relative;
         background-size: cover; padding-top: 150px; padding: 150px 0; 
     }
+    article.albumArea>div{
+        position: relative;
+    }
     article.albumArea>div h2{
         color: #ffffff; 
     }
     article.albumArea>div>div{
-        color: #ffffff; position: relative;
+        color: #ffffff; 
         padding-right: calc(100% - 637px);
         /* width: 637px; margin: 0; */
         /* width 637을 삭제하고 전체를 width로 가진 다음에 패딩으로 텍스트들을 가둔다. */
@@ -96,7 +101,6 @@
         content: ''; display: block; background: url('../images/Album_8.jpg') no-repeat; width: 100%; height: 100%; 
         max-width: 505px; max-height: 505px; position: absolute; left: 100%; top: 0; 
     } */
-
     article.albumArea>div>div::after{
         content: ''; display: block; background: url('../images/Album_8.jpg') no-repeat center; height: 100%; 
         background-size: cover;
@@ -115,8 +119,6 @@
     article.albumArea>div>div p:first-of-type{
         padding-top: 20px; box-sizing: border-box;
     }
-    
-    
     article.albumArea>div>div p:first-of-type::before{
         content: ''; display: block; width: 30px; border-top: 2px solid rgba(255, 255, 255, 0.5); box-sizing: border-box; margin-bottom: 20px;
     }
@@ -142,8 +144,12 @@
     section.playArea>ul.playlist>li.albumActive{
         display: block;
     }
-    .swiper-wrapper >div.albumActive{
-        opacity: 0.2;
+    .swiper-wrapper >div{
+        opacity: 0.3; 
+    }
+    .swiper-wrapper >div.albumActive,
+    .swiper-wrapper >div:hover{
+        opacity: 1;
     }
     section.playArea>ul.playlist>li{
         color: #ffffff; display: none; 
@@ -192,10 +198,12 @@
     }
     section.playArea>div:nth-of-type(2) input[type='button']{
         border:none; background-color: #a7d4ce;
-        position: absolute; left: 45%; top: 20%; background-image: url('../images/ll_03.png');
+        position: absolute; left: 45%; top: 20%; background-image: url('../images/btn_play.png');
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
-        
     }
+    /* section.playArea>div:nth-of-type(2) input[type='button'].playAreabutton{
+        background-image: url('../images/btn_pause.png');
+    } */
     section.playArea>div:nth-of-type(2) ul li{
         color: #ffffff; list-style: none; 
     }
@@ -252,7 +260,7 @@
     }
     
     section.playArea .swiper-total{
-        position: relative; clear: both; margin-bottom: 60px;
+        position: relative; clear: both; margin-bottom: 30px;
     }
     .swiper-slide .swiper-slide{
         width: 100%;

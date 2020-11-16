@@ -7,9 +7,12 @@ $(document).ready(function(){
     // test5();
     // test6();
     test7();
-    videoSk();
+    // videoSk();
     playTrack();
     timeGet();
+    vid();
+    test8();
+    audioTotal();
 });
 
 function swiperTEST4(){
@@ -54,14 +57,14 @@ function test2(){
     });
 }
 
-function test8(){
-    var test = $('section.playArea>ul.playlist li>ol>li');
-    var test2 = $('section.playArea>ul.playlist li.albumActive ol li.listActive p:first-of-type');
+// function test8(){
+//     var test = $('section.playArea>ul.playlist li>ol>li');
+//     var test2 = $('section.playArea>ul.playlist li.albumActive ol li.listActive p:first-of-type');
 
-    test.click(function(){
+//     test.click(function(){
 
-    });
-}
+//     });
+// }
 
 function test3(){
     var test = $('section.playArea>img');
@@ -103,22 +106,6 @@ function test4(){
 //     });
 // }
 
-function videoSk(){
-    var videoAreaSmallSelect = $('section.videoArea>div>video');
-    var videoAreaBgSelect = $('section.videoArea>video');
-
-
-
-    $('section.videoArea').click(function(){
-        if(videoAreaSmallSelect.pause){
-            videoAreaBgSelect.pause();
-        }else{
-            videoAreaBgSelect.play();
-        }
-        
-    });
-}
-
 
 function test7(){
     var albumList = $('section.playArea>ul.playlist li>ol>li');
@@ -135,13 +122,14 @@ function test7(){
     });
 }
 
+
 function playTrack(){
     var trackIndex = $('section.playArea>div:last-of-type>ul li span.listTrack');
     var albumList = $('section.playArea>ul.playlist li>ol>li');
     
     albumList.click(function(){
         var getIndex = $(this).index();
-        getIndex+=1;
+        // getIndex+=1;
 
         $('span#listTrack').empty();
         // $('span#listTrack').innerHTML=putIndex;
@@ -152,7 +140,7 @@ function playTrack(){
         // var putText = trackIndex.textContent;
 
         // var putText = trackIndex.textContent; 
-        document.getElementById('listTrack').innerHTML=getIndex;
+        document.getElementById('listTrack').innerHTML="track."+(getIndex+=1);
 
     });
 }
@@ -168,11 +156,55 @@ function timeGet(){
         document.getElementById('listTime').innerHTML=getTime;
     });
 }
+function test8(){
+    var playButtonSelect = $('section.playArea>div:last-child>input#playAreabutton');
+    var statusButton = playButtonSelect.css('background-image');
+    var buttonPlay = playButtonSelect.css('background-image','url(../images/btn_play.png)');
+    var buttonPause = playButtonSelect.css('background-image','url(../images/btn_pause.png)');
 
-function playbuttonChange(){
-    var playbutton = $('section.playArea>div:last-of-type(2) input');
-
-    playbutton.click(function(){
-        
+    playButtonSelect.click(function(){
+        if(statusButton==buttonPlay){
+            buttonPause;
+        }else{
+            buttonPlay;
+        }
+        // $(this).toggleClass('playAreabutton');
     });
+}
+
+function vid(){
+    var video = $('section.videoArea video');
+
+    function play(){
+        if(video.pause){
+            videoBG.pause();
+        }else{
+            videoBG.play();
+        }
+    }
+}
+
+
+
+var video = $('section.videoArea>div>video');
+var videoBG = $('section.videoArea>video');
+function play(){
+    if(video.pause){
+        videoBG.pause();
+    }else{
+        videoBG.play();
+    }
+}
+
+
+function audioTotal(){
+    var audioList = $('section.playArea>ul.playlist>li>ol>li');
+
+    audioList.click(function(){
+        var audio = new Audio("../audio/file_example.mp3");
+        audio.loop = false;
+        audio.volume = 0.3;
+        audio.play();
+        
+    })
 }
