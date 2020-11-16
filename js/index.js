@@ -3,11 +3,10 @@ $(document).ready(function(){
     playAreaSwiperSelect();
     playAreaAlbumListActive();
     playAreaAlbumImgChange();
-    test7();
-    playTrack();
-    timeGet();
+    listAndplayName();
+    playTrackNumber();
+    listtimeGet();
     test8();
-    test9();
     audioTotal();
 });
 
@@ -102,25 +101,23 @@ function playAreaAlbumImgChange(){
 //     });
 // }
 
-function test7(){
+function listAndplayName(){
     var albumList = $('.playArea>ul.playlist li ol li');
     
     albumList.click(function(){
-        document.getElementById("playName").removeAttribute("id"); 
+        $('#playName').removeAttr("id"); //jquery 추가 아래와 동일한 효과있음
+        // document.getElementById("playName").removeAttribute("id"); 바닐라 js
         // getlistContentChange.removeAttr('playName');
         var playNameId = $(this).children('p:first-of-type');
-        playNameId.attr('id','playName'); 
-        // alert(playNameId);
+        playNameId.attr('id','playName');
     
         var getText = document.getElementById("playName").textContent;
         document.getElementById('listName').innerHTML=getText;
     });
 }
 
-
-function playTrack(){
-    var trackIndex = $('section.playArea>div:last-of-type>ul li span.listTrack');
-    var albumList = $('section.playArea>ul.playlist li>ol>li');
+function playTrackNumber(){
+    var albumList = $('section.playArea>ul.playlist li ol li');
     
     albumList.click(function(){
         var getIndex = $(this).index();
@@ -133,15 +130,14 @@ function playTrack(){
         
         // $('track.'+ getIndex);
         // var putText = trackIndex.textContent;
-
         // var putText = trackIndex.textContent; 
         document.getElementById('listTrack').innerHTML="track."+(getIndex+=1);
-
     });
 }
 
-function timeGet(){
-    var albumList = $('section.playArea>ul.playlist li>ol>li');
+function listtimeGet(){
+    var albumList = $('section.playArea>ul.playlist li ol li');
+    
     albumList.click(function(){
         document.getElementById("playTime").removeAttribute("id"); 
         var playTimeId = $(this).children('p:last-of-type');
@@ -164,15 +160,7 @@ function test8(){
         }else{
             buttonPlay;
         }
-        // $(this).toggleClass('playAreabutton');
     });
-}
-
-
-
-
-function test9(){
-    var albumPlay =  new Array( '../audio/file_example.mp3', '../audio/file_example.mp3', '../audio/file_example.mp3' );
 }
 
 function audioTotal(){
@@ -194,9 +182,9 @@ function audioTotal(){
     audioList.click(function(){
         
         var albumIndex = $('section.playArea>ul.playlist>li.albumActive').index();
-        alert(albumIndex);
+        // alert(albumIndex);
         var listInAlbumIndex = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive').index();
-        alert(listInAlbumIndex);
+        // alert(listInAlbumIndex);
         
         // var audio = new Audio("../audio/file_example.mp3");
         var audio = new Audio("../audio/file_example.mp3");  //albumArray[albumIndex] 와 그 안에 audio file url 가져오기 find 쓰나?
