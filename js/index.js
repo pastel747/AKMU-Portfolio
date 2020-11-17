@@ -7,8 +7,8 @@ $(document).ready(function(){
     playTrackNumber();
     listtimeGet();
     audioTotal();
+    navSelect();
 });
-
 
 function test8(){
     // var playButtonSelect = $('.playArea>div:last-child>input');
@@ -21,7 +21,7 @@ function test8(){
     inputButtonSelect.click(function(){
         inputButtonSelect.addClass('playAreabuttonClass');
         
-        for?
+        // for?
         var test = inputButtonSelect.hasClass('playAreabutton');
         if(test==true){
 
@@ -51,6 +51,15 @@ function swiperSetting(){
     
         return direction;
     }
+}
+
+function navSelect(){
+    var headernavSelect = $('header>div>nav>ul>li>a');
+
+    headernavSelect.click(function(){
+        headernavSelect.removeClass('navActive'); 
+        $(this).addClass('navActive');
+    });
 }
 
 function playAreaSwiperSelect(){
@@ -171,7 +180,8 @@ function audioTotal(){
     var audioList = $('section.playArea>ul.playlist>li>ol>li');
     var inputButtonSelect = $('#playAreabuttonID');
 
-    var albumArray = new Array(Full_Album1, Single_Album1, Single_Album2, Single_Album3, Full_Album2, Single_Album4, Single_Album5, Full_Album3);
+    var albumlist = new Array(Full_Album1, Single_Album1, Single_Album2, Single_Album3, Full_Album2, Single_Album4, Single_Album5, Full_Album3);
+
     var Full_Album3 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3');
     var Full_Album2 = new Array('../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3');
     var Full_Album1 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3');
@@ -183,13 +193,13 @@ function audioTotal(){
     var Single_Album1 = new Array('../audio/file_example.mp3');
  
     audioList.click(function(){
-        var albumIndex = $('section.playArea>ul.playlist>li.albumActive').index();
+        var albumArray = $('section.playArea>ul.playlist>li.albumActive').index();
         // alert(albumIndex);
         var listInAlbumIndex = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive').index();
         // alert(listInAlbumIndex);
         
-        // var audio = new Audio("../audio/file_example.mp3");
-        var audio = new Audio("../audio/file_example.mp3");  //albumArray[albumIndex] 와 그 안에 audio file url 가져오기 find 쓰나?
+        var audio = new Audio("../audio/file_example.mp3");
+        //albumArray[albumIndex] 와 그 안에 audio file url 가져오기 find 쓰나?
 
         audio.loop = false;
         audio.volume = 0.3;
@@ -197,3 +207,21 @@ function audioTotal(){
 
     })
 }
+
+
+
+// function navActiveTest(){
+
+//     $(".aboutArea").click(function(){
+//         var x = $(".aboutArea>h2").offset();
+//         alert($(".aboutArea>h2").offset());
+//       });
+// }
+// $(".aboutArea").offset().top;
+// $(".videoArea").offset().top;
+// $(".albumArea").offset().top;
+// $(".videoArea").offset().top;
+// $(".aboutArea").offset().top;
+// $(".aboutArea").offset().top;
+
+

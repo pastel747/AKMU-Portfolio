@@ -1,7 +1,7 @@
 
 
 @media screen and (min-width:1240px){
-    article.albumArea,
+    section.albumArea,
     section.playArea{
         margin-bottom: 150px;
     }
@@ -58,71 +58,71 @@
         content: ''; visibility: hidden; display: block; clear: both;
     }
     section.aboutArea figure figcaption ul li{
-        float: left; list-style: none; width: 100%; font-size: 25px;
+        float: left; list-style: none; width: 100%; line-height: 25px; 
     }
     section.aboutArea figure figcaption ul li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
     section.aboutArea figure figcaption ul li h3{
-        float: left;
-        max-width: 200px; opacity: 0.8; width: 35.08%; font-weight: 500; 
+        float: left; max-width: 200px; opacity: 0.8; width: 35.08%; font-weight: 500; font-size: 25px; 
     }
     section.aboutArea figure figcaption ul li span{
-        float: left; opacity: 0.5; display: block; width: 64.91%;
+        float: left; opacity: 0.4; display: block; font-size: 20px; 
     }
     section.aboutArea figure figcaption p{
-        line-height: 30px; 
+        line-height: 30px; opacity: 0.7;
     }
 
 
 
-    article.albumArea:before{
+    section.albumArea:before{
         content: ''; display: block; background-color: rgba(0, 0, 0, 0.5); position: absolute; left: 0;top: 0; 
         width: 100%; height: 100%; 
     }
-    article.albumArea{
+    section.albumArea{
         background: url('../images/Album_8.jpg') no-repeat center; position: relative;
         background-size: cover; padding-top: 150px; padding: 150px 0; 
     }
-    article.albumArea>div{
+    section.albumArea>div{
         position: relative;
     }
-    article.albumArea>div h2{
+    section.albumArea>div h2{
         color: #ffffff; 
     }
-    article.albumArea>div>div{
+    section.albumArea>div>div{
         color: #ffffff; 
         padding-right: calc(100% - 637px);
         /* width: 637px; margin: 0; */
         /* width 637을 삭제하고 전체를 width로 가진 다음에 패딩으로 텍스트들을 가둔다. */
     }
-    /* article.albumArea>div>div h3::after{
+    /* section.albumArea>div>div h3::after{
         position: absolute;
         content: ''; display: block; background: url('../images/Album_8.jpg') no-repeat; width: 100%; height: 100%; 
         max-width: 505px; max-height: 505px; position: absolute; left: 100%; top: 0; 
     } */
-    article.albumArea>div>div::after{
+    section.albumArea>div>div::after{
         content: ''; display: block; background: url('../images/Album_8.jpg') no-repeat center; height: 100%; 
         background-size: cover;
         width: calc(100% - 657px); position: absolute; right: 0; top: 0; 
         /* width 값을 div + 간격 만큼 전체에서 삭제 후 position left가 아닌 right로 적용한다 */
     }
-    article.albumArea>div>div h3{
+    section.albumArea>div>div h3{
         font-size: 25px; margin-bottom: 20px; opacity: 0.8;
     }
-    article.albumArea>div>div span{
+    section.albumArea>div>div span{
         opacity: 0.5; margin-bottom: 40px; display: block;
     }
-    article.albumArea>div>div p{
-        opacity: 0.7; line-height: 30px; position: relative;
+    section.albumArea>div>div p{
+        opacity: 0.7; line-height: 30px;
+        /* position: relative; */
     }
-    article.albumArea>div>div p:first-of-type{
+    section.albumArea>div>div p:first-of-type{
         padding-top: 20px; box-sizing: border-box;
     }
-    article.albumArea>div>div p:first-of-type::before{
+    section.albumArea>div>div p:first-of-type::before{
         content: ''; display: block; width: 30px; border-top: 2px solid rgba(255, 255, 255, 0.5); box-sizing: border-box; margin-bottom: 20px;
     }
-    article.albumArea>div>div p:not(:last-of-type){
+    section.albumArea>div>div p:not(:last-of-type){
         margin-bottom: 20px;
     }
 
@@ -226,15 +226,15 @@
     }
 
 
-    ::-webkit-scrollbar {
+    .playArea>ul.playlist>li>ol::-webkit-scrollbar {
         width: 10px;
         background-color: #ffffff;
     }
-    ::-webkit-scrollbar-thumb {
+    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb {
         background-color:#27203f;
-        border: 2px solid #ffffff;
+        border: 3px solid #ffffff;
     }
-    ::-webkit-scrollbar-thumb:hover{
+    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb:hover{
         background-color: #8171bb; opacity: 0.5;
     }
 

@@ -16,7 +16,7 @@ a{
   header>div,
   section.videoArea>div,
   section.aboutArea>div,
-  article.albumArea>div,
+  section.albumArea>div,
   section.playArea,
   section.galleryArea h2,
   footer>div{
@@ -50,7 +50,7 @@ a{
     padding-left: 40%; line-height: 80px; box-sizing: border-box;
   }
   header>div nav ul li{
-    display: inline-block; text-align: right; 
+    display: inline-block; text-align: right;  
   }
   header>div nav ul li a{
     font-size: 16px; font-weight: 500; opacity: 0.4; color: #456cb0; box-sizing: border-box;
@@ -145,7 +145,7 @@ a{
   header>div,
   section.videoArea>div,
   section.aboutArea>div,
-  article.albumArea>div,
+  section.albumArea>div,
   section.playArea,
   section.galleryArea h2,
   footer>div{
@@ -182,7 +182,7 @@ a{
     display: inline-block; text-align: right; 
   }
   header>div nav ul li a{
-    font-size: 16px; font-weight: 500; opacity: 0.4; color: #456cb0; box-sizing: border-box;
+    font-size: 16px; font-weight: 300; opacity: 0.4; color: #456cb0; box-sizing: border-box;
   }
   header>div nav ul li a.navActive,
   header>div nav ul li a:hover{
@@ -195,7 +195,7 @@ a{
 
 
   footer{
-    background-color: #25375d; padding-top: 60px; min-height: 240px; box-sizing: border-box;
+    background-color: #25375d; padding: 60px 0 30px; min-height: 240px; box-sizing: border-box;
   }
   footer div{
     color: #ffffff;
@@ -216,7 +216,7 @@ a{
     display: inline-block; text-align: right; 
   }
   footer>div nav ul li a{
-    font-size: 16px; font-weight: 500; opacity: 0.4; box-sizing: border-box;
+    font-size: 16px; font-weight: 300; opacity: 0.4; box-sizing: border-box;
   }
   footer>div nav ul li a.navActive,
   footer>div nav ul li a:hover{
@@ -253,15 +253,14 @@ a{
   }
 
   footer>div>p{
-    opacity: 0.5; 
+    opacity: 0.3; font-weight: 300;
   }
   footer>div>p:last-of-type{
-    padding-left: 45%; line-height: 32px; box-sizing: border-box;
+    padding-left: 48%; line-height: 32px; box-sizing: border-box;
   }
   footer>div::after{
     content: ''; display: block; visibility: hidden; clear: both;
   }
-
 }
 /* pc fin */
 
