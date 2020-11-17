@@ -180,7 +180,7 @@ function audioTotal(){
     var audioList = $('section.playArea>ul.playlist>li>ol>li');
     var inputButtonSelect = $('#playAreabuttonID');
 
-    var albumlist = new Array(Full_Album1, Single_Album1, Single_Album2, Single_Album3, Full_Album2, Single_Album4, Single_Album5, Full_Album3);
+    var albumlist = [Full_Album1, Single_Album1, Single_Album2, Single_Album3, Full_Album2, Single_Album4, Single_Album5, Full_Album3];
 
     var Full_Album3 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3');
     var Full_Album2 = new Array('../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3');
@@ -193,13 +193,24 @@ function audioTotal(){
     var Single_Album1 = new Array('../audio/file_example.mp3');
  
     audioList.click(function(){
-        var albumArray = $('section.playArea>ul.playlist>li.albumActive').index();
-        // alert(albumIndex);
+        var albumArray = $('section.playArea>ul.playlist>li.albumActive>span').attr('id');
+        // var albumArray = document.getElementById("#Full_Album3").attr('id');
+        // var albumArray = $('section.playArea>ul.playlist>li.albumActive').index();
+        // alert(inArray(albumArray, albumlist,0));
+        // alert(jquery.inArray(albumArray, albumlist));
+        // alert(albumArray);
+
         var listInAlbumIndex = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive').index();
         // alert(listInAlbumIndex);
+        // alert(albumArray[listInAlbumIndex]);
+        
+        
+        alert(listInAlbumIndex);
+        alert();
+
         
         var audio = new Audio("../audio/file_example.mp3");
-        //albumArray[albumIndex] 와 그 안에 audio file url 가져오기 find 쓰나?
+        
 
         audio.loop = false;
         audio.volume = 0.3;
