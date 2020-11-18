@@ -6,8 +6,10 @@ $(document).ready(function(){
     listAndplayName();
     playTrackNumber();
     listtimeGet();
-    audioTotal();
-    navSelect();
+    // audioTotal();
+    // navSelect();
+    navActiveTest();
+    audioPlay();
 });
 
 function test8(){
@@ -53,14 +55,57 @@ function swiperSetting(){
     }
 }
 
-function navSelect(){
-    var headernavSelect = $('header>div>nav>ul>li>a');
-
-    headernavSelect.click(function(){
-        headernavSelect.removeClass('navActive'); 
-        $(this).addClass('navActive');
-    });
-}
+// function swiperSetting(){
+//     $(window).resize(function() { if($(window).width() <1240) {
+//         var swiper = new Swiper('.swiper-container', {
+//             slidesPerView: 3,
+//             spaceBetween: 20,
+//             direction: getDirection(),
+//             navigation: {
+//                 nextEl: '.swiper-button-next',
+//                 prevEl: '.swiper-button-prev',
+//             },
+//             on: {
+//                 resize: function () {
+//                 swiper.changeDirection(getDirection());
+//             }
+//             }
+//         });
+            
+//             function getDirection() {
+//                 var windowWidth = window.innerWidth;
+//                 var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+            
+//                 return direction;
+//             }
+//         } 
+//     });
+//     $(window).resize(function() { if($(window).width() >1239) {
+//         var swiper = new Swiper('.swiper-container', {
+//             slidesPerView: ,
+//             spaceBetween: 20,
+//             direction: getDirection(),
+//             navigation: {
+//                 nextEl: '.swiper-button-next',
+//                 prevEl: '.swiper-button-prev',
+//             },
+//             on: {
+//                 resize: function () {
+//                 swiper.changeDirection(getDirection());
+//             }
+//             }
+//         });
+            
+//             function getDirection() {
+//                 var windowWidth = window.innerWidth;
+//                 var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+            
+//                 return direction;
+//             }
+//         } 
+//     });
+    
+// }
 
 function playAreaSwiperSelect(){
     $('.swiper-wrapper div').click(function(){ //div 클릭시
@@ -176,63 +221,88 @@ function listtimeGet(){
     });
 }
 
-function audioTotal(){
-    var audioList = $('section.playArea>ul.playlist>li>ol>li');
-    var inputButtonSelect = $('#playAreabuttonID');
+// function audioTotal(){
+//     var audioList = $('section.playArea>ul.playlist>li>ol>li');
+//     var inputButtonSelect = $('#playAreabuttonID');
 
-    var albumlist = [Full_Album1, Single_Album1, Single_Album2, Single_Album3, Full_Album2, Single_Album4, Single_Album5, Full_Album3];
+//     var albumlist = [Full_Album1, Single_Album1, Single_Album2, Single_Album3, Full_Album2, Single_Album4, Single_Album5, Full_Album3];
 
-    var Full_Album3 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3');
-    var Full_Album2 = new Array('../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3');
-    var Full_Album1 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3');
+//     var Full_Album3 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3');
+//     var Full_Album2 = new Array('../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3');
+//     var Full_Album1 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3', '../audio/file_example2.mp3','../audio/file_example.mp3');
 
-    var Single_Album5 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3');
-    var Single_Album4 = new Array('../audio/file_example2.mp3', '../audio/file_example.mp3');
-    var Single_Album3 = new Array('../audio/file_example.mp3');
-    var Single_Album2 = new Array('../audio/file_example2.mp3', '../audio/file_example.mp3','../audio/file_example2.mp3', '../audio/file_example.mp3','../audio/file_example2.mp3', '../audio/file_example.mp3');
-    var Single_Album1 = new Array('../audio/file_example.mp3');
+//     var Single_Album5 = new Array('../audio/file_example.mp3', '../audio/file_example2.mp3');
+//     var Single_Album4 = new Array('../audio/file_example2.mp3', '../audio/file_example.mp3');
+//     var Single_Album3 = new Array('../audio/file_example.mp3');
+//     var Single_Album2 = new Array('../audio/file_example2.mp3', '../audio/file_example.mp3','../audio/file_example2.mp3', '../audio/file_example.mp3','../audio/file_example2.mp3', '../audio/file_example.mp3');
+//     var Single_Album1 = new Array('../audio/file_example.mp3');
+//     var albumArray = $('section.playArea>ul.playlist>li.albumActive>span').attr('id');
  
-    audioList.click(function(){
-        var albumArray = $('section.playArea>ul.playlist>li.albumActive>span').attr('id');
-        // var albumArray = document.getElementById("#Full_Album3").attr('id');
-        // var albumArray = $('section.playArea>ul.playlist>li.albumActive').index();
-        // alert(inArray(albumArray, albumlist,0));
-        // alert(jquery.inArray(albumArray, albumlist));
-        // alert(albumArray);
+//     audioList.click(function(){
+//         // var albumArray = document.getElementById("#Full_Album3").attr('id');
+//         // var albumArray = $('section.playArea>ul.playlist>li.albumActive').index();
+//         // alert(inArray(albumArray, albumlist,0));
+//         // alert(jquery.inArray(albumArray, albumlist));
+//         // alert(albumArray);
 
-        var listInAlbumIndex = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive').index();
-        // alert(listInAlbumIndex);
-        // alert(albumArray[listInAlbumIndex]);
-        
-        
-        alert(listInAlbumIndex);
-        alert();
+//         var listInAlbumIndex = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive').index();
+//         // alert(listInAlbumIndex);
 
-        
-        var audio = new Audio("../audio/file_example.mp3");
+//         const found = array1.find(element => element > 10);
+//         alert(albumArray[listInAlbumIndex]);
+//         // alert(found);
+
+//         // alert(listInAlbumIndex);
+//         // alert();
+
+//         var audio = new Audio("../audio/file_example.mp3");
         
 
-        audio.loop = false;
-        audio.volume = 0.3;
-        audio.play();
+//         audio.loop = false;
+//         audio.volume = 0.3;
+//         audio.play();
 
-    })
+//     })
+// }
+
+function audioPlay(){
+    var playList = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive');
+    var audioList = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive>audio');
+
+    playList.click(function(){
+        
+    });
 }
 
+// function navSelect(){
+//     var headernavSelect = $('header>div>nav>ul>li>a');
 
-
-// function navActiveTest(){
-
-//     $(".aboutArea").click(function(){
-//         var x = $(".aboutArea>h2").offset();
-//         alert($(".aboutArea>h2").offset());
-//       });
+//     headernavSelect.click(function(){
+//         headernavSelect.removeClass('navActive'); 
+//         $(this).addClass('navActive');
+//     });
 // }
-// $(".aboutArea").offset().top;
-// $(".videoArea").offset().top;
-// $(".albumArea").offset().top;
-// $(".videoArea").offset().top;
-// $(".aboutArea").offset().top;
-// $(".aboutArea").offset().top;
+
+function navActiveTest(){
+    // $(window).scrollTop(); 현재 스크롤바의 위치 값 스크롤 탑은 ()에 0을 선언
+    // offset(); document 에서의 요소들의 위치 값
+    // eq 는 몇 번째 를 선택할 건지
+    // each는 선택된 것의 각각. 
+    // 예를 들어, div eq(0) ,div eq(1) ,div eq(2) ,div eq(3)들은 div each 와 같다. 이것들을 모두 포함하고 있는 상태이다
+    var headernavSelect = $('header>div>nav>ul>li>a');
+
+    $(window).scroll(function(){
+        $('section').each(function(){
+            // $('section').each().offset().top; 이렇게 하면 모든 섹션이 선택된 상태의 offsettop이 나온다.
+            
+            if( $(window).scrollTop() > $(this).offset().top - 5 ){ //d윈도우의 값이 섹션의 값들 
+                headernavSelect.removeClass('navActive');
+                headernavSelect.eq($(this).index()-1).addClass('navActive');
+            }
+        })
+    });
+
+}
+
 
 
