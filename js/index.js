@@ -33,79 +33,42 @@ function test8(){
 
 function swiperSetting(){
     var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 20,
-    direction: getDirection(),
+    breakpoints: {
+        
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1450: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        }
+        
+        
+      },
+    // direction: getDirection(),
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
-    on: {
-        resize: function () {
-        swiper.changeDirection(getDirection());
     }
-    }
+    // ,
+    // on: {
+    //     resize: function () {
+    //     swiper.changeDirection(getDirection());
+    // }
+    // }
 });
     
-    function getDirection() {
-        var windowWidth = window.innerWidth;
-        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+    // function getDirection() {
+    //     var windowWidth = window.innerWidth;
+    //     var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
     
-        return direction;
-    }
+    //     return direction;
+    // }
 }
 
-// function swiperSetting(){
-//     $(window).resize(function() { if($(window).width() <1240) {
-//         var swiper = new Swiper('.swiper-container', {
-//             slidesPerView: 3,
-//             spaceBetween: 20,
-//             direction: getDirection(),
-//             navigation: {
-//                 nextEl: '.swiper-button-next',
-//                 prevEl: '.swiper-button-prev',
-//             },
-//             on: {
-//                 resize: function () {
-//                 swiper.changeDirection(getDirection());
-//             }
-//             }
-//         });
-            
-//             function getDirection() {
-//                 var windowWidth = window.innerWidth;
-//                 var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-            
-//                 return direction;
-//             }
-//         } 
-//     });
-//     $(window).resize(function() { if($(window).width() >1239) {
-//         var swiper = new Swiper('.swiper-container', {
-//             slidesPerView: ,
-//             spaceBetween: 20,
-//             direction: getDirection(),
-//             navigation: {
-//                 nextEl: '.swiper-button-next',
-//                 prevEl: '.swiper-button-prev',
-//             },
-//             on: {
-//                 resize: function () {
-//                 swiper.changeDirection(getDirection());
-//             }
-//             }
-//         });
-            
-//             function getDirection() {
-//                 var windowWidth = window.innerWidth;
-//                 var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-            
-//                 return direction;
-//             }
-//         } 
-//     });
-    
-// }
 
 function playAreaSwiperSelect(){
     $('.swiper-wrapper div').click(function(){ //div 클릭시
