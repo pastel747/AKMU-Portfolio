@@ -229,11 +229,23 @@ function listtimeGet(){
 // }
 
 function audioPlay(){
-    var playList = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive');
+    var playList = $('#playAreabuttonID');
     var audioList = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive>audio');
 
     playList.click(function(){
-        
+        var hasClassPlay = playList.hasClass('audioPlaying');
+
+        $('audio').loop = false;
+        $('audio').volume = 0.3;  
+
+        if(hasClassPlay==true){
+            playList.removeClass('audioPlaying');
+            $('audio').play();
+        }else{
+            playList.addClass('audioPlaying');
+            $('audio').pause();
+        }
+
     });
 }
 
@@ -267,5 +279,19 @@ function navActiveTest(){
 
 }
 
+
+function VideoPlay(){
+    var test = $('.videoArea>div>video');
+
+    // Play the video 
+    // $('#sample_video').trigger('play'); 
+      
+    // Pause the video 
+    // $('#sample_video').trigger('pause'); 
+
+    test.on('play', function () {
+        alert("Test");
+    });
+}
 
 

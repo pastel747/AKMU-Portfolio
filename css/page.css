@@ -46,7 +46,7 @@
     section.aboutArea>div>span{
         color:#456cb0; font-weight: 900; font-size: 400px; 
         transform: rotate(90deg); opacity: 0.15; 
-        position: absolute; top: 35%; right: -150%; 
+        position: absolute; top: 35%; right: -100%; 
         letter-spacing: -10px; z-index: -1;
     }
     /* section.aboutArea div{
@@ -242,11 +242,13 @@
         background-size: cover;
         text-indent: -9999px; width: 60px; height: 60px; border-radius: 30px;
     }
-    section.playArea>div:nth-of-type(2) input.playAreabutton{
+    section.playArea>div:nth-of-type(2) input.audioPlaying{
         background-image: url('../images/btn_pause.png'); border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%;
         text-indent: -9999px; width: 60px; height: 60px; border-radius: 30px;
     }
+
+    
     section.playArea>div:nth-of-type(2) ul li{
         color: #ffffff; list-style: none; 
     }
@@ -586,7 +588,7 @@
         position: absolute; left: 45%; top: 20%; background-image: url('../images/btn_play.png');
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    section.playArea>div:nth-of-type(2) input.playAreabutton{
+    section.playArea>div:nth-of-type(2) input.audioPlaying{
         background-image: url('../images/btn_pause.png');border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%;
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
@@ -894,7 +896,7 @@
         position: absolute; left: 45%; top: 20%; background-image: url('../images/btn_play.png');
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    section.playArea>div:nth-of-type(2) input.playAreabutton{
+    section.playArea>div:nth-of-type(2) input.audioPlaying{
         background-image: url('../images/btn_pause.png');border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%;
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;

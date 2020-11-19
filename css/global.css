@@ -91,7 +91,7 @@ a{
   footer{
     background-color: #25375d; 
     /* padding-top: 30px;  */
-    padding: 10px 2.60% ;
+    padding: 10px 2.60% 20px;
     /* max-height: 200px;  */
     box-sizing: border-box;
   }
@@ -99,15 +99,18 @@ a{
     color: #ffffff;  
     /* box-sizing: border-box; */
   }
+  footer>div::after{
+    content: ''; display: block; visibility: hidden; clear: both;
+  }
   footer>div h2{
     max-width: 60px; line-height: 60px;
   }
   footer>div>* a{
     color: #ffffff; 
   }
-  footer>div>* a img{
+  /* footer>div>* a img{
     width: 100%;
-  }
+  } */
   footer>div>*{
     float: left;
   }
@@ -130,7 +133,7 @@ a{
   } */
 
   footer>div ol{
-    list-style: none; margin: 0 0 30px 110px;
+    float: right; list-style: none; 
   }
   footer>div ol li{
     display: inline-block; text-indent: -9999px; width: 25px; 
@@ -163,12 +166,10 @@ a{
     padding-top: 15px; 
   } */
   footer>div>p:last-of-type{
-    /* padding-left: 24.5%;  */
+    /* padding-left: 24.5%;  */ float: right;
     box-sizing: border-box; padding-top: 10px; text-align: right;
   }
-  footer>div::after{
-    content: ''; display: block; visibility: hidden; clear: both;
-  }
+  
 
 }
 
@@ -274,7 +275,7 @@ a{
   } */
 
   footer>div ol{
-    list-style: none; margin: 0 0 30px 450px;
+    list-style: none; float: right;
   }
   footer>div ol li{
     display: inline-block; text-indent: -9999px; width: 25px; 
@@ -304,10 +305,12 @@ a{
     opacity: 0.5; font-size: 13px;
   }
   footer>div>p:first-of-type{
-    padding-top: 15px;
+    padding-top: 15px; clear: both;
   }
   footer>div>p:last-of-type{
-    padding-left: 24.5%; box-sizing: border-box; padding-top: 25px;
+    float: right;
+    /* padding-left: 24.5%;  */
+    box-sizing: border-box; padding-top: 25px;
   }
   footer>div::after{
     content: ''; display: block; visibility: hidden; clear: both;
