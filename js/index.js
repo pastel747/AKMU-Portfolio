@@ -10,7 +10,15 @@ $(document).ready(function(){
     // navSelect();
     navActiveTest();
     audioPlay();
+    VideoPlay();
+    test7();
 });
+
+function test7(){
+    $('label.mcheck').click(function(){
+        $(this).children('span')
+    });
+}
 
 function test8(){
     // var playButtonSelect = $('.playArea>div:last-child>input');
@@ -37,11 +45,11 @@ function swiperSetting(){
     spaceBetween: 20,
     breakpoints: {
         
-        768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
+        767: {
+          slidesPerView: 4,
+          spaceBetween: 20,
         },
-        1450: {
+        1000: {
           slidesPerView: 5,
           spaceBetween: 20,
         }
@@ -72,16 +80,16 @@ function swiperSetting(){
 
 function playAreaSwiperSelect(){
     $('.swiper-wrapper div').click(function(){ //div 클릭시
-        $('.playArea>ul.playlist>li').removeClass('albumActive'); //연동되는 li들에 일괄적으로 클래스를 빼준다
+        $('.playArea>.playArea_PlayList>ul.playlist>li').removeClass('albumActive'); //연동되는 li들에 일괄적으로 클래스를 빼준다
         $('.swiper-wrapper>div').removeClass('albumActive'); // li들처럼 div도 클래스를 빼준다
         $(this).addClass('albumActive'); //클릭된 div에 클래스를 넣어준다.
-        $('.playArea>ul.playlist>li').eq($(this).index()).addClass('albumActive'); //연동되는 li에 클릭된 div index값을 eq로 넣어주고 
+        $('.playArea>.playArea_PlayList>ul.playlist>li').eq($(this).index()).addClass('albumActive'); //연동되는 li에 클릭된 div index값을 eq로 넣어주고 
         // 그 값은 div index와 동일하므로 그대로 클래스를 넣어준다
     });
 }
 
 function playAreaAlbumListActive(){  
-    var albumList = $('.playArea>ul.playlist>li ol li');
+    var albumList = $('.playArea>.playArea_PlayList>ul.playlist>li ol li');
     albumList.click(function(){ 
         albumList.removeClass('listActive'); 
         $(this).addClass('listActive');
@@ -116,7 +124,7 @@ function playAreaAlbumListActive(){
 // }
 
 function playAreaAlbumImgChange(){
-    var albumImg = $('.playArea>img');
+    var albumImg = $('.playArea>.playArea_PlayList>img');
 
     $('.swiper-wrapper div').click(function(){
         var swiperImgAttr = $(this).find('img').attr('src');
@@ -138,22 +146,31 @@ function playAreaAlbumImgChange(){
 // }
 
 function listAndplayName(){
-    var albumList = $('.playArea>ul.playlist li ol li');
+    var albumList = $('.playArea>.playArea_PlayList>ul.playlist li ol li');
     
     albumList.click(function(){
-        $('#playName').removeAttr("id"); //jquery 추가 아래와 동일한 효과있음
+        $('#playName').removeAttr("id"); 
+        //jquery 추가 아래와 동일한 효과있음
         // document.getElementById("playName").removeAttribute("id"); 바닐라 js
         // getlistContentChange.removeAttr('playName');
-        var playNameId = $(this).children('p:first-of-type');
-        playNameId.attr('id','playName');
+
+        // var playNameId = $(this).children('p:first-of-type');
+        // playNameId.attr('id','playName');
     
-        var getText = document.getElementById("playName").textContent;
-        document.getElementById('listName').innerHTML=getText;
+        // var getText = $('#playName')[0].textContent;
+        // console.dir(document.getElementById('playName'));
+        // console.log($('#playName'));
+        // $('#listName')[0].innerHTML=getText;
+
+        
+        var getText = $(this).children('p:first-of-type').html();
+        $('#listName').html(getText);
+        // html()은 선택된 것의 내용을 가져오고(텍스트), html(a)는 선택된 것의 내용대신 a를 넣어준다.
     });
 }
 
 function playTrackNumber(){
-    var albumList = $('section.playArea>ul.playlist li ol li');
+    var albumList = $('section.playArea>.playArea_PlayList>ul.playlist li ol li');
     
     albumList.click(function(){
         var getIndex = $(this).index();
@@ -167,20 +184,25 @@ function playTrackNumber(){
         // $('track.'+ getIndex);
         // var putText = trackIndex.textContent;
         // var putText = trackIndex.textContent; 
-        document.getElementById('listTrack').innerHTML="track."+(getIndex+=1);
+
+        // document.getElementById('listTrack').innerHTML="track."+(getIndex+=1);
+        $('#listTrack').html("track."+(getIndex+=1));
     });
 }
 
 function listtimeGet(){
-    var albumList = $('section.playArea>ul.playlist li ol li');
+    var albumList = $('section.playArea>.playArea_PlayList>ul.playlist li ol li');
     
     albumList.click(function(){
-        document.getElementById("playTime").removeAttribute("id"); 
-        var playTimeId = $(this).children('p:last-of-type');
-        playTimeId.attr('id','playTime'); 
+        // document.getElementById("playTime").removeAttribute("id"); 
+        $('#playTime').removeAttr('id');
+        // var playTimeId = $(this).children('p:last-of-type');
+        // playTimeId.attr('id','playTime'); 
 
-        var getTime = document.getElementById("playTime").textContent;
-        document.getElementById('listTime').innerHTML=getTime;
+        // var getTime = document.getElementById("playTime").textContent;
+        // document.getElementById('listTime').innerHTML=getTime;
+        var getTime = $(this).children('p:last-of-type').html();
+        $('#listTime').html(getTime);
     });
 }
 
@@ -230,7 +252,7 @@ function listtimeGet(){
 
 function audioPlay(){
     var playList = $('#playAreabuttonID');
-    var audioList = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive>audio');
+    var audioList = $('section.playArea>.playArea_PlayList>ul.playlist>li.albumActive>ol>li.listActive>audio');
 
     playList.click(function(){
         var hasClassPlay = playList.hasClass('audioPlaying');
@@ -276,9 +298,7 @@ function navActiveTest(){
             }
         })
     });
-
 }
-
 
 function VideoPlay(){
     var test = $('.videoArea>div>video');
