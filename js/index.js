@@ -11,14 +11,7 @@ $(document).ready(function(){
     navActiveTest();
     audioPlay();
     VideoPlay();
-    test7();
 });
-
-function test7(){
-    $('label.mcheck').click(function(){
-        $(this).children('span')
-    });
-}
 
 function test8(){
     // var playButtonSelect = $('.playArea>div:last-child>input');
@@ -95,33 +88,6 @@ function playAreaAlbumListActive(){
         $(this).addClass('listActive');
     });
 }
-
-// function test8(){
-//     var test = $('section.playArea>ul.playlist li>ol>li');
-//     var test2 = $('section.playArea>ul.playlist li.albumActive ol li.listActive p:first-of-type');
-
-//     test.click(function(){
-
-//     });
-// }
-
-// function test3(){
-//     var test = $('section.playArea>img');
-//     var test2 = $('.swiper-wrapper div.albumActive img').attr('src');
-
-//     $('.swiper-wrapper div').click(function(){
-//         test.attr('src', test2);
-//     });
-// }
-
-// function test4(){
-//     var test = $('section.playArea>img');
-
-//     $('.swiper-wrapper div').click(function(){
-//         var test2 = $(this).find('img').attr('src');
-//         test.attr('src', test2);
-//     });
-// }
 
 function playAreaAlbumImgChange(){
     var albumImg = $('.playArea>.playArea_PlayList>img');
@@ -252,6 +218,7 @@ function listtimeGet(){
 
 function audioPlay(){
     var playList = $('#playAreabuttonID');
+    var albumList = $('.playArea>.playArea_PlayList>ul.playlist>li ol li');
     var audioList = $('section.playArea>.playArea_PlayList>ul.playlist>li.albumActive>ol>li.listActive>audio');
 
     playList.click(function(){
@@ -260,14 +227,26 @@ function audioPlay(){
         $('audio').loop = false;
         $('audio').volume = 0.3;  
 
+
         if(hasClassPlay==true){
             playList.removeClass('audioPlaying');
-            $('audio').play();
+            alert('1');
+            audioList.pause();
         }else{
             playList.addClass('audioPlaying');
-            $('audio').pause();
+            alert('2');
+            audioList.play();
         }
 
+    });
+}
+function audioPlayChange(){
+    var audioList = $('section.playArea>.playArea_PlayList>ul.playlist>li.albumActive>ol>li.listActive>audio');
+    var playList = $('#playAreabuttonID');
+
+    albumList.click(function(){
+        playList.removeClass('audioPlaying');
+        alert('11')
     });
 }
 

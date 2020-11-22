@@ -50,14 +50,28 @@ header>div input{
   }
   header>div label.mcheck{
     margin: 0 5px 0 auto;
-    display: block; padding: 28px 5px 0 5px; width: 25px;
+    display: block; padding: 28px 0 0 5px; width: 25px;
   }
-  header>div label.mcheck span{
-    margin-bottom: 8px; 
+  header>div label.mcheck>span{
+    margin-bottom: 8px;
     /* box-sizing: border-box; */
     display: block; border-top: 2px solid #456cb0; 
   }
-  
+  header>div label.mcheck>div{
+    /* display: none;  */ 
+    width: 30px;  height: 30px;
+    position: absolute; right: 4%; top: 23px;
+  }
+  header>div label.mcheck>div>span{
+    display: none; border-top: 2px solid #456cb0;
+    transform-origin: 0%; 
+  }
+  header>div label.mcheck>div>span:first-of-type{
+    transform: translate3d(7px, 3px, 0) rotate(45deg); 
+  }
+  header>div label.mcheck>div>span:last-of-type{
+    transform: translate3d(7px, 22px, 0) rotate(-45deg); 
+  }
 
   header>div nav{
     transition: height 0.7s ease-in-out;
@@ -86,6 +100,7 @@ header>div input{
   header>div label.mcheck + input.mcheck:checked + nav{
     height: 450px; 
   }
+  
   
   
 
