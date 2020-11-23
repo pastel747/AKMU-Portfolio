@@ -36,12 +36,17 @@ header>div input{
     position: fixed; 
     top: 0; left: 0; background-color: #ffffff; 
   }
-  header>div::after{
+  /* header>div::after{
+    content: ''; 
+    position: absolute; left: 0; top: 529px; height: 100vh; width: 100vw;
+  } */
+  header>div.afterActive::after{
     content: ''; 
     /* visibility: hidden; clear: both; display: block; */
-    position: absolute; left: 0; top: 530px; height: 100vh; width: 100vw;
-  
+    position: absolute; left: 0; top: 529px; height: 100vh; width: 100vw;
+    /* background-color: rebeccapurple; */
   }
+  
   header > div > h1{
     float: left;
   }
@@ -116,10 +121,10 @@ header>div input{
     height: 450px; 
   }
   label.mcheck.labelActive>span:first-of-type{
-    transform: translateY(10px) rotate(135deg);
+    transform: translateY(5px) rotate(135deg);
   }
   label.mcheck.labelActive>span:nth-of-type(2){
-    transform: rotate(-135deg);
+    transform: translateY(-5px) rotate(-135deg);
   }
   label.mcheck.labelActive>span:last-of-type{
     /* display: none; */

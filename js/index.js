@@ -12,7 +12,7 @@ $(document).ready(function(){
     audioPlay();
     VideoPlay();
     mobileScrollCancle();
-    mobilebodyBG();
+    // mobilebodyBG();
 });
 
 function test8(){
@@ -226,22 +226,24 @@ function audioPlay(){
     playList.click(function(){
         var hasClassPlay = playList.hasClass('audioPlaying');
 
-        $('audio').loop = false;
-        $('audio').volume = 0.3;  
+        var audio =$('audio')[0];
 
+        audio.loop = true;
+        audio.volume = 0.3;  
+        audio.currentTime=0;
 
         if(hasClassPlay==true){
             playList.removeClass('audioPlaying');
-            alert('1');
-            audioList.pause();
+            audio.pause();
         }else{
             playList.addClass('audioPlaying');
-            alert('2');
-            audioList.play();
+            audio.play();
+
         }
 
     });
 }
+
 function audioPlayChange(){
     var audioList = $('section.playArea>.playArea_PlayList>ul.playlist>li.albumActive>ol>li.listActive>audio');
     var playList = $('#playAreabuttonID');
@@ -299,20 +301,56 @@ function mobileScrollCancle(){
     $('label.mcheck').click(function(){
         $('label.mcheck').toggleClass('labelActive');
         $('body').toggleClass('scroll');
+        $('header>div').toggleClass('afterActive');
         
-        var bodyHas = $('body').hasClass('scroll');
+        var bodyHas = $('header>div').hasClass('afterActive');
 
         if(bodyHas==true){
-            $('header>div::after').css('background','rgba(0, 0, 0, 0.6)');
+            $('header>div.afterActive').css('background','rgba(0, 0, 0, 0.6)');
+            // $('header>div').css('background','rgba(0, 0, 0, 0.6)');
+            alert();
         }else{
-            $('header>div::after').css('background','');
+            $('header>div').css('background','');
+            alert();
+            
         }
+
+        // if(bodyHas==true){
+        //     $('header>div').after(function(){
+        //         $('header>div').css('background','rgba(0, 0, 0, 0.6)')
+        //     });
+        //     alert();
+        // }else{
+        //     $('header>div').after(function(){
+        //         $('header>div').css('background','')
+        //     });
+        //     alert();
+        // }
     
     });
 }
 
 
-function mobilebodyBG(){
+// function mobilebodyBG(){
 
-    
-}
+//     var bodyHas = $('body').hasClass('scroll');
+
+//         if(bodyHas==true){
+//             $('header>div').after().css('background','rgba(0, 0, 0, 0.6)');
+//         }else{
+//             $('header>div').after().css('background','');
+//         }
+// }
+
+
+
+
+// jQuery(document).ready(function( $ ) {
+//     $('audio').on("play", function (me) {
+//       $('audio').each(function (i,e) {
+//         if (e !== me.currentTarget) {
+//           this.pause(); 
+//         }
+//       });
+//     });
+//   })
