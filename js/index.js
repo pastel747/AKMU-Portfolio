@@ -11,6 +11,8 @@ $(document).ready(function(){
     navActiveTest();
     audioPlay();
     VideoPlay();
+    mobileScrollCancle();
+    mobilebodyBG();
 });
 
 function test8(){
@@ -293,4 +295,24 @@ function VideoPlay(){
     });
 }
 
+function mobileScrollCancle(){
+    $('label.mcheck').click(function(){
+        $('label.mcheck').toggleClass('labelActive');
+        $('body').toggleClass('scroll');
+        
+        var bodyHas = $('body').hasClass('scroll');
 
+        if(bodyHas==true){
+            $('header>div::after').css('background','rgba(0, 0, 0, 0.6)');
+        }else{
+            $('header>div::after').css('background','');
+        }
+    
+    });
+}
+
+
+function mobilebodyBG(){
+
+    
+}

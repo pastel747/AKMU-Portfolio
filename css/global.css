@@ -2,6 +2,9 @@
 body *{
   font-family: 'noto sans KR';
 }
+body.scroll{
+  overflow: hidden;
+}
 
 body{position: relative; width: 100%;}
 a{
@@ -34,7 +37,10 @@ header>div input{
     top: 0; left: 0; background-color: #ffffff; 
   }
   header>div::after{
-    content: ''; visibility: hidden; clear: both; display: block;
+    content: ''; 
+    /* visibility: hidden; clear: both; display: block; */
+    position: absolute; left: 0; top: 530px; height: 100vh; width: 100vw;
+  
   }
   header > div > h1{
     float: left;
@@ -56,9 +62,14 @@ header>div input{
     margin-bottom: 8px;
     /* box-sizing: border-box; */
     display: block; border-top: 2px solid #456cb0; 
+    transition: 0.5s transform;
   }
-  header>div label.mcheck>div{
-    /* display: none;  */ 
+  header>div label.mcheck>span:last-of-type{
+    transition: 0.5s opacity;
+  }
+ 
+  /* header>div label.mcheck>div{
+    display: none;  
     width: 30px;  height: 30px;
     position: absolute; right: 4%; top: 23px;
   }
@@ -71,7 +82,7 @@ header>div input{
   }
   header>div label.mcheck>div>span:last-of-type{
     transform: translate3d(7px, 22px, 0) rotate(-45deg); 
-  }
+  } */
 
   header>div nav{
     transition: height 0.7s ease-in-out;
@@ -87,6 +98,7 @@ header>div input{
     /* height: 0; */
     /* padding-top: 10px; box-sizing: border-box; */
   }
+  
   header>div nav ul li{
     text-align: center; width: 100%; display: block;
   }
@@ -97,10 +109,22 @@ header>div input{
     line-height: 80px; 
     display: block; width: 100%;
   }
-  header>div label.mcheck + input.mcheck:checked + nav{
+  /* header>div label.mcheck + input.mcheck:checked + nav{
+    height: 450px; 
+  } */
+  label.mcheck.labelActive ~ nav{
     height: 450px; 
   }
-  
+  label.mcheck.labelActive>span:first-of-type{
+    transform: translateY(10px) rotate(135deg);
+  }
+  label.mcheck.labelActive>span:nth-of-type(2){
+    transform: rotate(-135deg);
+  }
+  label.mcheck.labelActive>span:last-of-type{
+    /* display: none; */
+    opacity: 0;
+  }
   
   
 
@@ -117,33 +141,28 @@ header>div input{
 
 
 
+  
+  
   footer{
     background-color: #25375d; 
     /* padding-top: 30px;  */
-    padding: 10px 2.60% 20px;
-    /* min-height: 200px;  */
+    padding: 30px 2.60% 20px;
+    /* max-height: 200px;  */
     box-sizing: border-box;
   }
   footer div{
     color: #ffffff;  
     /* box-sizing: border-box; */
   }
-  footer>div::after{
-    content: ''; display: block; visibility: hidden; clear: both;
-  }
   footer>div h2{
-    max-width: 105px; line-height: 60px; 
-    float: left;
+    max-width: 105px; line-height: 60px;
   }
   footer>div>* a{
     color: #ffffff; 
   }
-  /* footer>div>* a img{
-    width: 100%;
-  } */
-  /* footer>div>*{
+  footer>div>*{
     float: left;
-  } */
+  }
   footer>div nav{
     /* padding-left: 25%; line-height: 80px; */
     display: none;
@@ -163,12 +182,11 @@ header>div input{
   } */
 
   footer>div ol{
-    float: right; list-style: none;
+    list-style: none; float: right; margin-bottom: 30px;
   }
   footer>div ol li{
     display: inline-block; text-indent: -9999px; width: 25px; 
-    line-height: 60px; max-width: 50px;
-    
+    line-height: 60px;
     background-size: contain; background-repeat: no-repeat; background-position: center;
   }
   footer>div ol li a{
@@ -187,36 +205,23 @@ header>div input{
     background-image: url('../images/bul_sns4.png'); 
   }
   footer>div ol li:not(:first-of-type){
-    margin-left: 20px; 
+    margin-left: 20px;
   }
-  
 
   footer>div>p{
-    opacity: 0.3; font-size: 10px;
-    line-height: 15px; 
-    /* float: left; */
-    /* padding-top: 50px;  */
-    box-sizing: border-box;
-    clear: both;
-    width: 50%;
-    /* max-width: 230px; */
+    opacity: 0.3; font-size: 10px; line-height: 15px; width: 50%;
   }
-  
   footer>div>p:first-of-type{
-    /* float: left;  */
-    padding-top: 30px; 
+    clear: both;
   }
   footer>div>p:last-of-type{
-    /* padding-left: 24.5%;  */ 
-    float: right;
-    /* padding-top: 60px;  */
-    /* box-sizing: border-box; padding-top: 13px;  */
-    text-align: right;
+    float: right; text-align: right;
+    /* padding-left: 24.5%;  */
+    /* box-sizing: border-box; padding-top: 5px; */
   }
-  
-  /* footer>div::after{
+  footer>div::after{
     content: ''; display: block; visibility: hidden; clear: both;
-  } */
+  }
   
 
 }

@@ -164,7 +164,6 @@
         max-width: 60px; max-height: 60px; width: 100%;
          /* float: left; display: none; */
     }
-    
     section.playArea>.playArea_PlayList>ul.playlist{
         list-style: none; 
         width: 100%;
@@ -190,7 +189,7 @@
     
     section.playArea>.playArea_PlayList>ul.playlist>li>span,
     section.playArea>.playArea_PlayList>ul.playlist>li>h3{
-        padding-left: 20%; box-sizing: border-box;
+        padding-left: 70px; box-sizing: border-box; 
     }
     section.playArea>.playArea_PlayList>ul.playlist>li>span{
         font-weight: 500; font-size: 13px; margin-bottom: 10px; display: block; opacity: 0.7; 
@@ -200,13 +199,13 @@
         content: ''; display: block; background-image: url('../images/Album_8.jpg');
     }
     section.playArea>.playArea_PlayList>ul.playlist>li>h3{
-        font-weight: 500; font-size: 20px; margin-bottom: 30px;
+        font-weight: 500; font-size: 20px; margin-bottom: 40px;
         white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
         max-width: 500px; 
         
     }
     section.playArea>.playArea_PlayList>ul.playlist>li ol{
-        list-style:none; overflow-y: auto; max-height: 230px;
+        list-style:none; overflow-y: auto; height: 230px;
 
     }
     section.playArea>.playArea_PlayList>ul.playlist>li ol li::after{
@@ -238,7 +237,10 @@
         content: ''; position: absolute; left: 0; top: 0; background: url('../images/play-button_03.png') no-repeat; 
         width: 13px; height: 16px;
     }
-
+    section.playArea::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+        /* clear 안하면 부모 높이를 뚫고 나간다. */
+    }
     section.playArea>div.playArea_Play{
         float: left; position: relative; 
         min-height: 90px; 
@@ -257,7 +259,7 @@
     }
     section.playArea>div.playArea_Play input.audioPlaying{
         background-image: url('../images/btn_pause.png'); border:none; background-color: #a7d4ce;
-        position: absolute; left: 45%; top: 20%;
+        position: absolute; left: 43%; top: 15%; border:none;
         text-indent: -9999px; width: 60px; height: 60px; border-radius: 30px;
     }
 
@@ -360,7 +362,6 @@
 
 
 }
-
 
 @media screen and (min-width: 768px) and (max-width: 1239px){
     /* section.albumArea,
@@ -467,6 +468,8 @@
 
 
 
+   
+
     section.albumArea:before{
         content: ''; display: block; 
         background-color: rgba(0, 0, 0, 0.5); 
@@ -477,9 +480,9 @@
         background: url('../images/Album_8.jpg') no-repeat center; position: relative;
         background-size: cover;  
     }
-    /* section.albumArea>div{
+    section.albumArea>div{
         position: relative;
-    } */
+    }
     section.albumArea>div h2{
         color: #ffffff; 
     }
@@ -563,7 +566,7 @@
     }
     section.playArea>.playArea_PlayList>ul.playlist>li>h3,
     section.playArea>.playArea_PlayList>ul.playlist>li>span{
-        box-sizing: border-box;  padding-left: 14%; 
+        box-sizing: border-box;  padding-left: 120px; 
     }
     section.playArea>.playArea_PlayList>ul.playlist>li>span:before{
         content: ''; display: block; background-image: url('../images/Album_8.jpg');
