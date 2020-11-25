@@ -1,11 +1,11 @@
 
+
 @media screen and (max-width: 767px){
     /* section.albumArea,
     section.playArea{
         margin-bottom: 150px;
     } */
     
-    section.aboutArea,
     section.albumArea>div,
     section.playArea{
         padding: 40px 2.60%; box-sizing: border-box;
@@ -38,22 +38,19 @@
 
 
     section.aboutArea{
-        overflow: hidden;
+        overflow: hidden; 
     }
     section.aboutArea>div{
-        position: relative; 
+        position: relative; overflow: hidden; padding: 0 2.60% 60px 2.60%;
     }
     section.aboutArea>div>span{
         color:#456cb0; font-weight: 900; font-size: 400px; 
-        transform: rotate(90deg); opacity: 0.15; 
-        position: absolute; top: 35%; right: -100%; 
+        transform: rotate(90deg); opacity: 0.25; 
+        position: absolute; top: 25%; right: calc(100%-60%); 
         letter-spacing: -10px; z-index: -1;
     }
-    /* section.aboutArea div{
-        overflow: hidden;
-    } */
     section.aboutArea div h2{
-        color: #456cb0;
+        color: #456cb0; padding-top: 60px;
     }
     /* section.aboutArea figure::after{
         content: ''; visibility: hidden; display: block; clear: both;
@@ -152,28 +149,32 @@
 
     
     
-    section.playArea::after{
+    section.playArea.playArea_PlayList::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
     section.playArea h2{
         color: #456cb0;
     }
-    /* section.playArea{
-        position: relative;
-    } */
-    section.playArea img{
-        /* position: absolute; right: 0; top: 0; */
-        max-width: 610px; max-height: 670px; width: 100%; float: left;
+    
+    section.playArea>.playArea_PlayList{
+        position: relative; 
     }
-    section.playArea>ul.playlist{
+    section.playArea>.playArea_PlayList>img{
+        position: absolute; left: 5%; top: 5%;
+        max-width: 60px; max-height: 60px; width: 100%;
+         /* float: left; display: none; */
+    }
+    section.playArea>.playArea_PlayList>ul.playlist{
         list-style: none; 
+        width: 100%;
         /* width: 50.80%;  */
-        float: left; 
+        /* float: left;  */
         background-color: #27203f; 
-        padding: 10% 4.83%; box-sizing: border-box; max-height: 495px;
+        padding: 4.83%; box-sizing: border-box; max-height: 495px;
     }
-    section.playArea>ul.playlist>li.albumActive{
-        display: block;
+    section.playArea>.playArea_PlayList>ul.playlist>li.albumActive{
+        display: block; 
+        
     }
     .swiper-wrapper >div{
         opacity: 0.3; 
@@ -182,108 +183,124 @@
     .swiper-wrapper >div:hover{
         opacity: 1;
     }
-    section.playArea>ul.playlist>li{
+    section.playArea>.playArea_PlayList>ul.playlist>li{
         color: #ffffff; display: none; 
     }
-    section.playArea>ul.playlist>li>span{
-        font-weight: 500; font-size: 13px; margin-bottom: 10px; display: block; opacity: 0.7;
+    
+    section.playArea>.playArea_PlayList>ul.playlist>li>span,
+    section.playArea>.playArea_PlayList>ul.playlist>li>h3{
+        padding-left: 70px; box-sizing: border-box; 
     }
-    section.playArea>ul.playlist>li>span:before{
+    section.playArea>.playArea_PlayList>ul.playlist>li>span{
+        font-weight: 500; font-size: 13px; margin-bottom: 10px; display: block; opacity: 0.7; 
+        
+    }
+    section.playArea>.playArea_PlayList>ul.playlist>li>span:before{
         content: ''; display: block; background-image: url('../images/Album_8.jpg');
     }
-    section.playArea>ul.playlist>li>h3{
-        font-weight: 500; font-size: 25px; margin-bottom: 50px;
+    section.playArea>.playArea_PlayList>ul.playlist>li>h3{
+        font-weight: 500; font-size: 20px; margin-bottom: 40px;
+        white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+        max-width: 500px; 
+        
     }
-    section.playArea>ul.playlist>li ol{
-        list-style:none; overflow-y: auto; max-height: 230px; 
+    section.playArea>.playArea_PlayList>ul.playlist>li ol{
+        list-style:none; overflow-y: auto; height: 230px;
+
     }
-    section.playArea>ul.playlist>li ol li::after{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
-    section.playArea>ul.playlist>li ol li{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li{
         float: left; width: 100%; margin-bottom: 60px;
     }
-    section.playArea>ul.playlist>li ol li>*{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li>*{
         float: left;
     }
-    section.playArea>ul.playlist>li ol li{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li{
         opacity: 0.3;
     }
-    section.playArea>ul.playlist>li ol li.listActive{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li.listActive{
         opacity: 1; color: #a7d4ce;
     }
-    section.playArea>ul.playlist>li ol li p{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p{
         font-size: 14px;
     }
-    section.playArea>ul.playlist>li ol li p:first-of-type{
-        position: relative; padding-left: 10%; width: 60%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:first-of-type{
+        position: relative; padding-left: 10%; width: 60%; 
+        white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
-    section.playArea>ul.playlist>li ol li p:last-of-type{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:last-of-type{
         width: 10%; margin: 0; text-align: right; padding-left: 10%; 
     }
-    section.playArea>ul.playlist>li ol li p:first-of-type:before{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:first-of-type:before{
         content: ''; position: absolute; left: 0; top: 0; background: url('../images/play-button_03.png') no-repeat; 
         width: 13px; height: 16px;
     }
-
-    section.playArea>div:nth-of-type(2){
+    section.playArea::after{
+        content: ''; display: block; clear: both; visibility: hidden;
+        /* clear 안하면 부모 높이를 뚫고 나간다. */
+    }
+    section.playArea>div.playArea_Play{
         float: left; position: relative; 
         min-height: 90px; 
         width: 100%; 
         background-color: #1d1633;
-        padding: 20px 4.83%; box-sizing: border-box;
+        padding: 20px 4.83%; box-sizing: border-box; margin-bottom: 60px;
     }
     /* section.playArea>div:nth-of-type(2) input[type='button']:hover{
         background-color: #456cb0;
     } */
-    section.playArea>div:nth-of-type(2) input{
+    section.playArea>div.playArea_Play input{
         border:none; background-color: #a7d4ce;
-        position: absolute; left: 40%; top: 15%; background-image: url('../images/btn_play.png');
+        position: absolute; left: 43%; top: 15%; background-image: url('../images/btn_play.png');
         background-size: cover;
         text-indent: -9999px; width: 60px; height: 60px; border-radius: 30px;
     }
-    section.playArea>div:nth-of-type(2) input.audioPlaying{
+    section.playArea>div.playArea_Play input.audioPlaying{
         background-image: url('../images/btn_pause.png'); border:none; background-color: #a7d4ce;
-        position: absolute; left: 45%; top: 20%;
+        position: absolute; left: 43%; top: 15%; border:none;
         text-indent: -9999px; width: 60px; height: 60px; border-radius: 30px;
     }
 
     
-    section.playArea>div:nth-of-type(2) ul li{
+    section.playArea>div.playArea_Play ul li{
         color: #ffffff; list-style: none; 
     }
-    section.playArea>div:nth-of-type(2) ul li>*:not(:last-child){
+    section.playArea>div.playArea_Play ul li>*:not(:last-child){
         float: left; 
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive span{
+    section.playArea>div.playArea_Play ul li.listActive span{
         opacity: 0.5; margin-bottom: 15px; display: block; width: 100%; font-size: 13px; font-weight: 300; 
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive p:first-of-type{
+    section.playArea>div.playArea_Play ul li.listActive p:first-of-type{
         color: #a7d4ce; font-size: 16px; max-width: 120px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive p:last-of-type{
+    section.playArea>div.playArea_Play ul li.listActive p:last-of-type{
         float: right; font-size: 15px; font-weight: 500; opacity: 0.7;
     }
-    section.playArea>div:nth-of-type(2) ul li::after{
+    section.playArea>div.playArea_Play ul li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
 
 
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar {
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar {
         width: 10px;
         background-color: #ffffff;
     }
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb {
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar-thumb {
         background-color:#27203f;
         border: 3px solid #ffffff;
     }
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb:hover{
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar-thumb:hover{
         background-color: #8171bb; opacity: 0.5;
     }
 
-
+    .swiper-total{
+        position: relative; clear: both; margin-bottom: 20px;
+    }
     .swiper-container{
-        width: 75%;
+        width: 80%;
         height: 50%;
     }
     .swiper-slide {
@@ -304,9 +321,7 @@
         align-items: center;
     }
     
-    section.playArea .swiper-total{
-        position: relative; clear: both; margin-bottom: 20px;
-    }
+    
     .swiper-slide .swiper-slide{
         width: 100%;
     }
@@ -348,14 +363,13 @@
 
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1239px){
     /* section.albumArea,
     section.playArea{
         margin-bottom: 150px;
     } */
     
-    section.aboutArea,
+    
     section.albumArea>div,
     section.playArea{
         padding: 80px 2.60%; box-sizing: border-box;
@@ -386,23 +400,33 @@
 
 
 
-    section.aboutArea{
+    /* section.aboutArea{
         overflow: hidden;
     }
     section.aboutArea>div{
-        position: relative; 
+        position: relative; overflow: hidden;
     }
     section.aboutArea>div>span{
         color:#456cb0; font-weight: 900; font-size: 400px; 
-        transform: rotate(90deg); opacity: 0.15; 
-        position: absolute; top: 35%; right: -70%; 
+        transform: rotate(90deg); opacity: 0.25; 
+        position: absolute; top: 12%; right: -47%;
+        letter-spacing: -10px; z-index: -1;
+    } */
+    section.aboutArea{
+        overflow: hidden; 
+    }
+    section.aboutArea>div{
+        position: relative; overflow: hidden; padding: 0 0 80px 2.60%;
+    }
+    section.aboutArea>div>span{
+        color:#456cb0; font-weight: 900; font-size: 400px; 
+        transform: rotate(90deg); opacity: 0.25; 
+        position: absolute; top: 25%; right: -40%; 
         letter-spacing: -10px; z-index: -1;
     }
-    /* section.aboutArea div{
-        overflow: hidden;
-    } */
+
     section.aboutArea div h2{
-        color: #456cb0;
+        color: #456cb0; padding-top: 80px;
     }
     section.aboutArea figure::after{
         content: ''; visibility: hidden; display: block; clear: both;
@@ -444,6 +468,8 @@
 
 
 
+   
+
     section.albumArea:before{
         content: ''; display: block; 
         background-color: rgba(0, 0, 0, 0.5); 
@@ -454,9 +480,9 @@
         background: url('../images/Album_8.jpg') no-repeat center; position: relative;
         background-size: cover;  
     }
-    /* section.albumArea>div{
+    section.albumArea>div{
         position: relative;
-    } */
+    }
     section.albumArea>div h2{
         color: #ffffff; 
     }
@@ -506,22 +532,22 @@
     section.playArea h2{
         color: #456cb0;
     }
-    /* section.playArea{
+    section.playArea>.playArea_PlayList{
         position: relative;
-    } */
-    section.playArea img{
-        /* position: absolute; right: 0; top: 0; */
-        max-width: 610px; max-height: 670px; width: 100%; float: left;
-        /* display: none; */
     }
-    section.playArea>ul.playlist{
+    section.playArea>.playArea_PlayList>img{
+        position: absolute; left: 5%; top: 7%;
+        max-width: 90px; max-height: 90px; width: 100%;
+         /* float: left; display: none; */
+    }
+    section.playArea>.playArea_PlayList>ul.playlist{
         list-style: none; 
         /* width: 50.80%;  */
-        float: left;
+        /* float: left; */
         background-color: #27203f; 
         padding: 4.83%; box-sizing: border-box; min-height: 495px;
     }
-    section.playArea>ul.playlist>li.albumActive{
+    section.playArea>.playArea_PlayList>ul.playlist>li.albumActive{
         display: block;
     }
     .swiper-wrapper >div{
@@ -531,97 +557,101 @@
     .swiper-wrapper >div:hover{
         opacity: 1;
     }
-    section.playArea>ul.playlist>li{
+    section.playArea>.playArea_PlayList>ul.playlist>li{
         color: #ffffff; display: none; 
     }
-    section.playArea>ul.playlist>li>span{
+    section.playArea>.playArea_PlayList>ul.playlist>li>span{
         font-weight: 500; font-size: 16px; margin-bottom: 20px; display: block;
-        opacity: 0.7;
+        opacity: 0.7; 
     }
-    section.playArea>ul.playlist>li>span:before{
+    section.playArea>.playArea_PlayList>ul.playlist>li>h3,
+    section.playArea>.playArea_PlayList>ul.playlist>li>span{
+        box-sizing: border-box;  padding-left: 120px; 
+    }
+    section.playArea>.playArea_PlayList>ul.playlist>li>span:before{
         content: ''; display: block; background-image: url('../images/Album_8.jpg');
     }
-    section.playArea>ul.playlist>li>h3{
+    section.playArea>.playArea_PlayList>ul.playlist>li>h3{
         font-weight: 500; font-size: 25px; margin-bottom: 60px;
     }
-    section.playArea>ul.playlist>li ol{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol{
         list-style:none; overflow-y: auto; max-height: 254px; 
     }
-    section.playArea>ul.playlist>li ol li::after{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
-    section.playArea>ul.playlist>li ol li{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li{
         float: left; width: 100%; margin-bottom: 60px;
     }
-    section.playArea>ul.playlist>li ol li>*{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li>*{
         float: left;
     }
-    section.playArea>ul.playlist>li ol li{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li{
         opacity: 0.3;
     }
-    section.playArea>ul.playlist>li ol li.listActive{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li.listActive{
         opacity: 1; color: #a7d4ce;
     }
-    section.playArea>ul.playlist>li ol li p:first-of-type{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:first-of-type{
         position: relative; padding-left: 6.34%; width: 65%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
-    section.playArea>ul.playlist>li ol li p:last-of-type{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:last-of-type{
         width: 10%; margin: 0; text-align: right; padding-left: 5%;
     }
-    section.playArea>ul.playlist>li ol li p:first-of-type:before{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:first-of-type:before{
         content: ''; position: absolute; left: 0; top: 0; background: url('../images/play-button_03.png') no-repeat; 
         width: 13px; height: 16px;
     }
 
-    section.playArea>div:nth-of-type(2){
+    section.playArea>div.playArea_Play{
         float: left; position: relative; 
         min-height: 115px; 
         width: 100%; 
         background-color: #1d1633;
         padding: 30px 4.83%; box-sizing: border-box;
     }
-    section.playArea>div:nth-of-type(2) input[type='button']:hover{
+    section.playArea>div.playArea_Play input[type='button']:hover{
         background-color: #456cb0;
     }
-    section.playArea>div:nth-of-type(2) input{
+    section.playArea>div.playArea_Play input{
         border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%; background-image: url('../images/btn_play.png');
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    section.playArea>div:nth-of-type(2) input.audioPlaying{
+    section.playArea>div.playArea_Play input.audioPlaying{
         background-image: url('../images/btn_pause.png');border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%;
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    section.playArea>div:nth-of-type(2) ul li{
+    section.playArea>div.playArea_Play ul li{
         color: #ffffff; list-style: none; 
     }
-    section.playArea>div:nth-of-type(2) ul li>*:not(:last-child){
+    section.playArea>div.playArea_Play ul li>*:not(:last-child){
         float: left; 
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive span{
+    section.playArea>div.playArea_Play ul li.listActive span{
         opacity: 0.5; margin-bottom: 20px; display: block; width: 100%; 
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive p:first-of-type{
+    section.playArea>div.playArea_Play ul li.listActive p:first-of-type{
         color: #a7d4ce; font-size: 20px; max-width: 190px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive p:last-of-type{
+    section.playArea>div.playArea_Play ul li.listActive p:last-of-type{
         padding-left: 50%; float: right;
     }
-    section.playArea>div:nth-of-type(2) ul li::after{
+    section.playArea>div.playArea_Play ul li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
 
 
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar {
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar {
         width: 10px;
         background-color: #ffffff;
     }
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb {
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar-thumb {
         background-color:#27203f;
         border: 3px solid #ffffff;
     }
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb:hover{
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar-thumb:hover{
         background-color: #8171bb; opacity: 0.5;
     }
 
@@ -706,6 +736,7 @@
     }
     section.videoArea>video{
         display: block; filter: blur(5px); width: 100%; height: 100%;
+        min-width: 1240px;
     }
     section.videoArea > div video{
         position: absolute; top: 10.5%;  width: 1240px; height: 700px;
@@ -719,15 +750,15 @@
         overflow: hidden;
     }
     section.aboutArea>div{
-        position: relative; padding: 150px 0;
+        position: relative; padding: 150px 0; overflow: hidden;
     }
     section.aboutArea>div>span{
-        color:#456cb0; font-weight: 900; font-size: 400px; transform: rotate(90deg); opacity: 0.25; 
-        position: absolute; top: 25%; right: -40%; letter-spacing: -10px; 
+        color:#456cb0; font-weight: 900; font-size: 400px; 
+        transform: rotate(90deg); opacity: 0.25; 
+        position: absolute; top: 25%; right: -40%; 
+        letter-spacing: -10px; z-index: -1;
     }
-    section.aboutArea div{
-        overflow: hidden;
-    }
+
     section.aboutArea div h2{
         color: #456cb0;
     }
@@ -829,14 +860,14 @@
     section.playArea h2{
         color: #456cb0;
     }
-    section.playArea img{
+    section.playArea>.playArea_PlayList>img{
         max-width: 610px; max-height: 670px; width: 100%; float: left;
     }
-    section.playArea>ul.playlist{
+    section.playArea>.playArea_PlayList>ul.playlist{
         list-style: none; width: 50.80%; float: left; background-color: #27203f; 
         padding: 4.83%; box-sizing: border-box; min-height: 495px;
     }
-    section.playArea>ul.playlist>li.albumActive{
+    section.playArea>.playArea_PlayList>ul.playlist>li.albumActive{
         display: block;
     }
     .swiper-wrapper >div{
@@ -846,100 +877,102 @@
     .swiper-wrapper >div:hover{
         opacity: 1;
     }
-    section.playArea>ul.playlist>li{
+    section.playArea>.playArea_PlayList>ul.playlist>li{
         color: #ffffff; display: none; 
     }
-    section.playArea>ul.playlist>li>span{
+    section.playArea>.playArea_PlayList>ul.playlist>li>span{
         font-weight: 500; font-size: 16px; margin-bottom: 20px; display: block; opacity: 0.7;
     }
-    section.playArea>ul.playlist>li>h3{
+    section.playArea>.playArea_PlayList>ul.playlist>li>h3{
         font-weight: 500; font-size: 25px; margin-bottom: 60px;
     }
-    section.playArea>ul.playlist>li ol{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol{
         list-style:none; overflow-y: auto; max-height: 254px; 
     }
-    section.playArea>ul.playlist>li ol li::after{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
-    section.playArea>ul.playlist>li ol li{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li{
         float: left; width: 100%; margin-bottom: 60px;
     }
-    section.playArea>ul.playlist>li ol li>*{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li>*{
         float: left;
     }
-    section.playArea>ul.playlist>li ol li{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li{
         opacity: 0.3;
     }
-    section.playArea>ul.playlist>li ol li.listActive{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li.listActive{
         opacity: 1; color: #a7d4ce;
     }
-    section.playArea>ul.playlist>li ol li p:first-of-type{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:first-of-type{
         position: relative; padding-left: 6.34%; width: 65%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
-    section.playArea>ul.playlist>li ol li p:last-of-type{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:last-of-type{
         width: 10%; margin: 0; text-align: right; padding-left: 5%;
     }
-    section.playArea>ul.playlist>li ol li p:first-of-type:before{
+    section.playArea>.playArea_PlayList>ul.playlist>li ol li p:first-of-type:before{
         content: ''; position: absolute; left: 0; top: 0; background: url('../images/play-button_03.png') no-repeat; 
         width: 13px; height: 16px;
     }
 
-    section.playArea>div:nth-of-type(2){
+    section.playArea>div.playArea_Play{
         float: left; position: relative; min-height: 115px; width: 50.80%; background-color: #1d1633;
         padding: 30px 4.83%; box-sizing: border-box;
     }
-    section.playArea>div:nth-of-type(2) input[type='button']:hover{
+    section.playArea>div.playArea_Play input[type='button']:hover{
         background-color: #456cb0;
     }
-    section.playArea>div:nth-of-type(2) input{
+    section.playArea>div.playArea_Play input{
         border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%; background-image: url('../images/btn_play.png');
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    section.playArea>div:nth-of-type(2) input.audioPlaying{
+    section.playArea>div.playArea_Play input.audioPlaying{
         background-image: url('../images/btn_pause.png');border:none; background-color: #a7d4ce;
         position: absolute; left: 45%; top: 20%;
         text-indent: -9999px; width: 70px; height: 70px; border-radius: 35px;
     }
-    section.playArea>div:nth-of-type(2) ul li{
+    section.playArea>div.playArea_Play ul li{
         color: #ffffff; list-style: none; 
     }
-    section.playArea>div:nth-of-type(2) ul li>*:not(:last-child){
+    section.playArea>div.playArea_Play ul li>*:not(:last-child){
         float: left; 
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive span{
+    section.playArea>div.playArea_Play ul li.listActive span{
         opacity: 0.5; margin-bottom: 20px; display: block; width: 100%; 
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive p:first-of-type{
+    section.playArea>div.playArea_Play ul li.listActive p:first-of-type{
         color: #a7d4ce; font-size: 20px; max-width: 190px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     }
-    section.playArea>div:nth-of-type(2) ul li.listActive p:last-of-type{
+    section.playArea>div.playArea_Play ul li.listActive p:last-of-type{
         padding-left: 50%; float: right;
     }
-    section.playArea>div:nth-of-type(2) ul li::after{
+    section.playArea>div.playArea_Play ul li::after{
         content: ''; display: block; visibility: hidden; clear: both;
     }
 
 
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar {
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar {
         width: 10px;
         background-color: #ffffff;
     }
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb {
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar-thumb {
         background-color:#27203f;
         border: 3px solid #ffffff;
     }
-    .playArea>ul.playlist>li>ol::-webkit-scrollbar-thumb:hover{
+    .playArea>.playArea_PlayList>ul.playlist>li>ol::-webkit-scrollbar-thumb:hover{
         background-color: #8171bb; opacity: 0.5;
     }
 
-
+    .swiper-total{
+        position: relative; clear: both; margin-bottom: 30px; 
+    }
     .swiper-container{
-        width: 100%;
+        width: 90%;
         height: 50%;
     }
     .swiper-slide {
-        width: 20%;
+        /* width: 20%; */
         text-align: center;
         background: #fff;
         display: -webkit-box;
@@ -956,13 +989,11 @@
         align-items: center;
     }
     
-    section.playArea .swiper-total{
-        position: relative; clear: both; margin-bottom: 30px;
-    }
+    
     .swiper-slide .swiper-slide{
         width: 100%;
     }
-    section.playArea .swiper-total .swiper-container .swiper-wrapper .swiper-slide img{
+    .swiper-slide img{
         width: 100%;
     }
     section.playArea .swiper-total>div:nth-of-type(2),
@@ -970,10 +1001,10 @@
         position: absolute; top: 50%;
     }
     section.playArea .swiper-total .swiper-button-prev{
-        left: -5%; 
+        left: 0%; 
     }
     section.playArea .swiper-total .swiper-button-next{
-        right: -5%;
+        right: 0%;
     }
 
 

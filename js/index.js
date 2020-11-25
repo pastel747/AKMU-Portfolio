@@ -7,29 +7,11 @@ $(document).ready(function(){
     playTrackNumber();
     listtimeGet();
     // audioTotal();
-    // navSelect();
     navActiveTest();
     audioPlay();
+    VideoPlay();
+    mobileScrollCancle();
 });
-
-function test8(){
-    // var playButtonSelect = $('.playArea>div:last-child>input');
-    // var statusButton = playButtonSelect.css('background-image');
-    // var buttonPlay = playButtonSelect.css('background-image','url(../images/btn_play.png)');
-    // var buttonPause = playButtonSelect.css('background-image','url(../images/btn_pause.png)');
-    var inputButtonSelect = $('#playAreabuttonID');
-
-
-    inputButtonSelect.click(function(){
-        inputButtonSelect.addClass('playAreabuttonClass');
-        
-        // for?
-        var test = inputButtonSelect.hasClass('playAreabutton');
-        if(test==true){
-
-        }
-    });
-}
 
 function swiperSetting(){
     var swiper = new Swiper('.swiper-container', {
@@ -37,11 +19,11 @@ function swiperSetting(){
     spaceBetween: 20,
     breakpoints: {
         
-        768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
+        767: {
+          slidesPerView: 4,
+          spaceBetween: 20,
         },
-        1450: {
+        1000: {
           slidesPerView: 5,
           spaceBetween: 20,
         }
@@ -69,54 +51,26 @@ function swiperSetting(){
     // }
 }
 
-
 function playAreaSwiperSelect(){
     $('.swiper-wrapper div').click(function(){ //div 클릭시
-        $('.playArea>ul.playlist>li').removeClass('albumActive'); //연동되는 li들에 일괄적으로 클래스를 빼준다
+        $('.playArea>.playArea_PlayList>ul.playlist>li').removeClass('albumActive'); //연동되는 li들에 일괄적으로 클래스를 빼준다
         $('.swiper-wrapper>div').removeClass('albumActive'); // li들처럼 div도 클래스를 빼준다
         $(this).addClass('albumActive'); //클릭된 div에 클래스를 넣어준다.
-        $('.playArea>ul.playlist>li').eq($(this).index()).addClass('albumActive'); //연동되는 li에 클릭된 div index값을 eq로 넣어주고 
+        $('.playArea>.playArea_PlayList>ul.playlist>li').eq($(this).index()).addClass('albumActive'); //연동되는 li에 클릭된 div index값을 eq로 넣어주고 
         // 그 값은 div index와 동일하므로 그대로 클래스를 넣어준다
     });
 }
 
 function playAreaAlbumListActive(){  
-    var albumList = $('.playArea>ul.playlist>li ol li');
+    var albumList = $('.playArea>.playArea_PlayList>ul.playlist>li ol li');
     albumList.click(function(){ 
         albumList.removeClass('listActive'); 
         $(this).addClass('listActive');
     });
 }
 
-// function test8(){
-//     var test = $('section.playArea>ul.playlist li>ol>li');
-//     var test2 = $('section.playArea>ul.playlist li.albumActive ol li.listActive p:first-of-type');
-
-//     test.click(function(){
-
-//     });
-// }
-
-// function test3(){
-//     var test = $('section.playArea>img');
-//     var test2 = $('.swiper-wrapper div.albumActive img').attr('src');
-
-//     $('.swiper-wrapper div').click(function(){
-//         test.attr('src', test2);
-//     });
-// }
-
-// function test4(){
-//     var test = $('section.playArea>img');
-
-//     $('.swiper-wrapper div').click(function(){
-//         var test2 = $(this).find('img').attr('src');
-//         test.attr('src', test2);
-//     });
-// }
-
 function playAreaAlbumImgChange(){
-    var albumImg = $('.playArea>img');
+    var albumImg = $('.playArea>.playArea_PlayList>img');
 
     $('.swiper-wrapper div').click(function(){
         var swiperImgAttr = $(this).find('img').attr('src');
@@ -124,36 +78,32 @@ function playAreaAlbumImgChange(){
     });
 }
 
-// function test5(){
-//     var albumList = $('section.playArea>ul.playlist li>ol>li');
-//     var getlistContentChange = $('section.playArea>ul.albumActive ol li.listActive p:first-of-type').innerText();
-//     var playlistText = $('section.playArea>div:first-of-type ul li.listActive>p.listName');
-    
-//     albumList.click(function(){
-//         getlistContentChange.attr('id', 'test');
-//         var getText = document.getElementById("test").textContent;
-//         playlistText == getText;
-
-//     });
-// }
-
 function listAndplayName(){
-    var albumList = $('.playArea>ul.playlist li ol li');
+    var albumList = $('.playArea>.playArea_PlayList>ul.playlist li ol li');
     
     albumList.click(function(){
-        $('#playName').removeAttr("id"); //jquery 추가 아래와 동일한 효과있음
+        $('#playName').removeAttr("id"); 
+        //jquery 추가 아래와 동일한 효과있음
         // document.getElementById("playName").removeAttribute("id"); 바닐라 js
         // getlistContentChange.removeAttr('playName');
-        var playNameId = $(this).children('p:first-of-type');
-        playNameId.attr('id','playName');
+
+        // var playNameId = $(this).children('p:first-of-type');
+        // playNameId.attr('id','playName');
     
-        var getText = document.getElementById("playName").textContent;
-        document.getElementById('listName').innerHTML=getText;
+        // var getText = $('#playName')[0].textContent;
+        // console.dir(document.getElementById('playName'));
+        // console.log($('#playName'));
+        // $('#listName')[0].innerHTML=getText;
+
+        
+        var getText = $(this).children('p:first-of-type').html();
+        $('#listName').html(getText);
+        // html()은 선택된 것의 내용을 가져오고(텍스트), html(a)는 선택된 것의 내용대신 a를 넣어준다.
     });
 }
 
 function playTrackNumber(){
-    var albumList = $('section.playArea>ul.playlist li ol li');
+    var albumList = $('section.playArea>.playArea_PlayList>ul.playlist li ol li');
     
     albumList.click(function(){
         var getIndex = $(this).index();
@@ -167,20 +117,25 @@ function playTrackNumber(){
         // $('track.'+ getIndex);
         // var putText = trackIndex.textContent;
         // var putText = trackIndex.textContent; 
-        document.getElementById('listTrack').innerHTML="track."+(getIndex+=1);
+
+        // document.getElementById('listTrack').innerHTML="track."+(getIndex+=1);
+        $('#listTrack').html("track."+(getIndex+=1));
     });
 }
 
 function listtimeGet(){
-    var albumList = $('section.playArea>ul.playlist li ol li');
+    var albumList = $('section.playArea>.playArea_PlayList>ul.playlist li ol li');
     
     albumList.click(function(){
-        document.getElementById("playTime").removeAttribute("id"); 
-        var playTimeId = $(this).children('p:last-of-type');
-        playTimeId.attr('id','playTime'); 
+        // document.getElementById("playTime").removeAttribute("id"); 
+        $('#playTime').removeAttr('id');
+        // var playTimeId = $(this).children('p:last-of-type');
+        // playTimeId.attr('id','playTime'); 
 
-        var getTime = document.getElementById("playTime").textContent;
-        document.getElementById('listTime').innerHTML=getTime;
+        // var getTime = document.getElementById("playTime").textContent;
+        // document.getElementById('listTime').innerHTML=getTime;
+        var getTime = $(this).children('p:last-of-type').html();
+        $('#listTime').html(getTime);
     });
 }
 
@@ -230,33 +185,62 @@ function listtimeGet(){
 
 function audioPlay(){
     var playList = $('#playAreabuttonID');
-    var audioList = $('section.playArea>ul.playlist>li.albumActive>ol>li.listActive>audio');
+    var albumList = $('.playlist>li>ol>li');
+    var albumSelect = $('.swiper-slide');
+    var test = 0;
+    var test2 = 0;
+
+    var audioSrcIndex = [
+        ['audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3','audio/file_example.mp3'],
+        ['audio/file_example2.mp3','audio/file_example2.mp3'],
+        ['audio/file_example.mp3','audio/file_example.mp3'],
+        ['audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3'],
+        ['audio/file_example.mp3'],
+        ['audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3'],
+        ['audio/file_example.mp3'],
+        ['audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3','audio/file_example2.mp3']
+    ];
+
+
+    albumSelect.click(function(){
+        test = $(this).index();
+        alert(test);
+    });
+
+    albumList.click(function(){
+        test2 = $(this).index();
+        alert(test2);
+        playList.removeClass('audioPlaying');
+        var audio =$('.audioBlind')[0];
+        $('.audioBlind').attr('src',audioSrcIndex[test][test2]);
+        
+        audio.pause();
+        alert('중단');
+    });
+
+
+
 
     playList.click(function(){
         var hasClassPlay = playList.hasClass('audioPlaying');
-
-        $('audio').loop = false;
-        $('audio').volume = 0.3;  
+        var audio =$('.audioBlind')[0];
+        $('.audioBlind').attr('src',audioSrcIndex[test][test2]);
+        
+        audio.loop = true;
+        audio.volume = 0.3;  
+        audio.currentTime=0;
 
         if(hasClassPlay==true){
             playList.removeClass('audioPlaying');
-            $('audio').play();
+            audio.pause();
         }else{
             playList.addClass('audioPlaying');
-            $('audio').pause();
+            audio.play();
+
         }
 
     });
 }
-
-// function navSelect(){
-//     var headernavSelect = $('header>div>nav>ul>li>a');
-
-//     headernavSelect.click(function(){
-//         headernavSelect.removeClass('navActive'); 
-//         $(this).addClass('navActive');
-//     });
-// }
 
 function navActiveTest(){
     // $(window).scrollTop(); 현재 스크롤바의 위치 값 스크롤 탑은 ()에 0을 선언
@@ -276,9 +260,7 @@ function navActiveTest(){
             }
         })
     });
-
 }
-
 
 function VideoPlay(){
     var test = $('.videoArea>div>video');
@@ -289,9 +271,39 @@ function VideoPlay(){
     // Pause the video 
     // $('#sample_video').trigger('pause'); 
 
-    test.on('play', function () {
-        alert("Test");
-    });
+    
 }
 
+function mobileScrollCancle(){
+    $('label.mcheck').click(function(){
+        $('label.mcheck').toggleClass('labelActive');
+        $('body').toggleClass('scroll');
+        // $('header>div').toggleClass('afterActive');
+        
+        // var bodyHas = $('header>div').hasClass('afterActive');
+
+        // if(bodyHas==true){
+        //     $('header>div.afterActive').css('background','rgba(0, 0, 0, 0.6)');
+        //     $('header>div').css('background','rgba(0, 0, 0, 0.6)');
+        //     alert();
+        // }else{
+        //     $('header>div').css('background','');
+        //     alert();
+            
+        // }
+
+        // if(bodyHas==true){
+        //     $('header>div').after(function(){
+        //         $('header>div').css('background','rgba(0, 0, 0, 0.6)')
+        //     });
+        //     alert();
+        // }else{
+        //     $('header>div').after(function(){
+        //         $('header>div').css('background','')
+        //     });
+        //     alert();
+        // }
+    
+    });
+}
 
