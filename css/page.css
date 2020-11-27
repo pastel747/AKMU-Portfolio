@@ -11,6 +11,14 @@
         padding: 40px 2.60%; box-sizing: border-box;
     }
 
+
+
+    /* video::-webkit-media-controls-timeline {
+        display: none;
+    }
+    video::-webkit-media-controls {
+        display: none;
+    } */
     section.videoArea{
         padding-top: 80px; 
         /* height: 100%; */
@@ -729,7 +737,7 @@
     } */
 
     section.videoArea{
-        padding-top: 80px; overflow: hidden; max-height: 697px; position: relative; 
+        padding-top: 79px; overflow: hidden; max-height: 697px; position: relative; 
     }
     section.videoArea h2{
         display: none;
@@ -741,7 +749,6 @@
     section.videoArea > div video{
         position: absolute; top: 10.5%;  width: 1240px; height: 700px;
         max-height: 697px; margin: 0 auto; z-index: 10;
-        /* left 없어도 될까요? */
     }
 
 
