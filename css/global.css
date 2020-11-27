@@ -40,21 +40,12 @@ header>div input{
     content: ''; 
     position: absolute; left: 0; top: 529px; height: 100vh; width: 100vw;
   } */
-<<<<<<< HEAD
   /* header>div.afterActive::after{
     content: ''; 
     visibility: hidden; clear: both; display: block;
     position: absolute; left: 0; top: 529px; height: 100vh; width: 100vw;
     background-color: rgba(0, 0, 0, .8); animation-name: backgroundDisplay;
   } */
-=======
-  header>div.afterActive::after{
-    content: ''; 
-    /* visibility: hidden; clear: both; display: block; */
-    position: absolute; left: 0; top: 529px; height: 100vh; width: 100vw;
-    /* background-color: rebeccapurple; */
-  }
->>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
   
   header > div > h1{
     float: left;
@@ -80,7 +71,6 @@ header>div input{
   }
   header>div label.mcheck>span:last-of-type{
     transition: 0.5s opacity;
-<<<<<<< HEAD
   }
  
   /* header>div label.mcheck>div{
@@ -92,19 +82,6 @@ header>div input{
     display: none; border-top: 2px solid #456cb0;
     transform-origin: 0%; 
   }
-=======
-  }
- 
-  /* header>div label.mcheck>div{
-    display: none;  
-    width: 30px;  height: 30px;
-    position: absolute; right: 4%; top: 23px;
-  }
-  header>div label.mcheck>div>span{
-    display: none; border-top: 2px solid #456cb0;
-    transform-origin: 0%; 
-  }
->>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
   header>div label.mcheck>div>span:first-of-type{
     transform: translate3d(7px, 3px, 0) rotate(45deg); 
   }
@@ -117,24 +94,15 @@ header>div input{
     text-align: center; width: 100%;
     height: 0;
     position: absolute; left: 0; top: 80px; overflow-y: hidden; 
-<<<<<<< HEAD
     background-color: rgba(0,0,0,0.5);
-=======
->>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
     /* margin-left: 15%; */
     /* padding-left: 35%;  box-sizing: border-box; */
   }
   header>div nav ul{
     /* transition: height 0.7s ease-in-out; height: 0; */
-<<<<<<< HEAD
     background-color: #25375d; padding: 25px 0; box-sizing: border-box;
     /* height: 100%;  height 값을 없애버리면 ul 뒷 배경이 보이게 된다. */
     /* height: 0; padding-top: 10px; box-sizing: border-box; */
-=======
-    background-color: #25375d; height: 100%; padding: 25px 0; box-sizing: border-box;
-    /* height: 0; */
-    /* padding-top: 10px; box-sizing: border-box; */
->>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
   }
   
   header>div nav ul li{
@@ -151,19 +119,11 @@ header>div input{
     height: 450px; 
   } */
   label.mcheck.labelActive ~ nav{
-<<<<<<< HEAD
     height:100vh; 
   }
   label.mcheck.labelActive>span:first-of-type{
     transform: translateY(5px) rotate(135deg);
   }
-=======
-    height: 450px; 
-  }
-  label.mcheck.labelActive>span:first-of-type{
-    transform: translateY(5px) rotate(135deg);
-  }
->>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
   label.mcheck.labelActive>span:nth-of-type(2){
     transform: translateY(-5px) rotate(-135deg);
   }
