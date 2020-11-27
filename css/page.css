@@ -166,12 +166,21 @@
     
     section.playArea>.playArea_PlayList{
         position: relative; 
+<<<<<<< HEAD
     }
     section.playArea>.playArea_PlayList>img{
         position: absolute; left: 5%; top: 5%;
         max-width: 60px; max-height: 60px; width: 100%;
          /* float: left; display: none; */
     }
+=======
+    }
+    section.playArea>.playArea_PlayList>img{
+        position: absolute; left: 5%; top: 5%;
+        max-width: 60px; max-height: 60px; width: 100%;
+         /* float: left; display: none; */
+    }
+>>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
     section.playArea>.playArea_PlayList>ul.playlist{
         list-style: none; 
         width: 100%;
@@ -198,11 +207,19 @@
     section.playArea>.playArea_PlayList>ul.playlist>li>span,
     section.playArea>.playArea_PlayList>ul.playlist>li>h3{
         padding-left: 70px; box-sizing: border-box; 
+<<<<<<< HEAD
     }
     section.playArea>.playArea_PlayList>ul.playlist>li>span{
         font-weight: 500; font-size: 13px; margin-bottom: 10px; display: block; opacity: 0.7; 
         
     }
+=======
+    }
+    section.playArea>.playArea_PlayList>ul.playlist>li>span{
+        font-weight: 500; font-size: 13px; margin-bottom: 10px; display: block; opacity: 0.7; 
+        
+    }
+>>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
     section.playArea>.playArea_PlayList>ul.playlist>li>span:before{
         content: ''; display: block; background-image: url('../images/Album_8.jpg');
     }
@@ -571,11 +588,19 @@
     section.playArea>.playArea_PlayList>ul.playlist>li>span{
         font-weight: 500; font-size: 16px; margin-bottom: 20px; display: block;
         opacity: 0.7; 
+<<<<<<< HEAD
     }
     section.playArea>.playArea_PlayList>ul.playlist>li>h3,
     section.playArea>.playArea_PlayList>ul.playlist>li>span{
         box-sizing: border-box;  padding-left: 120px; 
     }
+=======
+    }
+    section.playArea>.playArea_PlayList>ul.playlist>li>h3,
+    section.playArea>.playArea_PlayList>ul.playlist>li>span{
+        box-sizing: border-box;  padding-left: 120px; 
+    }
+>>>>>>> a2c698d8651d5427ccf7f8cb78a39289139bbea1
     section.playArea>.playArea_PlayList>ul.playlist>li>span:before{
         content: ''; display: block; background-image: url('../images/Album_8.jpg');
     }
